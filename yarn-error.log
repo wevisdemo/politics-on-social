@@ -1,0 +1,36 @@
+Arguments: 
+  /usr/local/Cellar/node@16/16.14.2/bin/node /Users/bariyard-mothership/.yarn/bin/yarn.js create ./ --typescript
+
+PATH: 
+  /opt/miniconda3/bin:/opt/miniconda3/condabin:/Users/bariyard-mothership/.yarn/bin:/Users/bariyard-mothership/.config/yarn/global/node_modules/.bin:/usr/local/opt/node@12/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/bariyard-mothership/Library/Android/sdk/emulator:/Users/bariyard-mothership/Library/Android/sdk/tools:/Users/bariyard-mothership/Library/Android/sdk/tools/bin:/Users/bariyard-mothership/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  16.14.2
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: Name should not start with ".", got "./"
+      at parsePackageName (/Users/bariyard-mothership/.yarn/lib/cli.js:87701:11)
+      at coerceCreatePackageName (/Users/bariyard-mothership/.yarn/lib/cli.js:87718:20)
+      at Object.<anonymous> (/Users/bariyard-mothership/.yarn/lib/cli.js:87624:33)
+      at Generator.next (<anonymous>)
+      at step (/Users/bariyard-mothership/.yarn/lib/cli.js:310:30)
+      at /Users/bariyard-mothership/.yarn/lib/cli.js:328:14
+      at new Promise (<anonymous>)
+      at new F (/Users/bariyard-mothership/.yarn/lib/cli.js:5301:28)
+      at Object.<anonymous> (/Users/bariyard-mothership/.yarn/lib/cli.js:307:12)
+      at Object.run (/Users/bariyard-mothership/.yarn/lib/cli.js:87643:17)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
