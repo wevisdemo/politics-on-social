@@ -9,6 +9,7 @@ import "@wevisdemo/ui/styles/typography.css";
 import Intro from '../components/intro';
 import PartNav from '../components/part-nav';
 import Part1 from '../components/part-1';
+import Part2 from '../components/part-2';
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <Intro />
       <PartNav />
       <Part1 />
+      <Part2 />
       <WvFooter dark={true} />
     </div>
   )
