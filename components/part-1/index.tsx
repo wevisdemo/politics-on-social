@@ -1,6 +1,7 @@
 import React from 'react'
 import WvContainer from "@wevisdemo/ui/components/container"
 import PostSummary from './post-summary'
+import ChartPattern from './chart/chart-pattern'
 type Props = {}
 
 const Part1 = (props: Props) => {
@@ -18,6 +19,7 @@ const Part1 = (props: Props) => {
           พรรคขยันสื่อสาร<br />ทางออนไลน์<br />แค่ไหน
         </div>
         <PostSummary />
+        <ChartPattern />
       </div>
     </div>
   )

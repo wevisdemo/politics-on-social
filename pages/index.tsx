@@ -22,9 +22,37 @@ const Home: NextPage = () => {
       <Intro />
       <PartNav />
       <Part1 />
-      <WvFooter />
+      <WvFooter dark={true} />
     </div>
   )
 }
 
 export default Home
+
+
+// const TIMELINE_COLLECTION = [
+//   {
+//     party: "พลังประชารัฐ",
+//     content: "",
+//   },
+//   {
+//     party: "ภูมิใจไทย",
+//     content: "",
+//   },
+//   {
+//     party: "ประชาธิปัตย์",
+//     content: "",
+//   },
+//   {
+//     party: "เพื่อไทย",
+//     content: "",
+//   },
+//   {
+//     party: "อนาคตใหม่/ก้าวไกล",
+//     content: "",
+//   },
+//   {
+//     party: "เสรีรวมไทย",
+//     content: "",
+//   },
+// ]
