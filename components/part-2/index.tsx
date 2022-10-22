@@ -1,4 +1,5 @@
 import React from 'react'
+import PersonCommunication from './communication/person-communication'
 import TopicCommunication from './communication/topic-communication'
 import VisualCommunication from './communication/visual-communication'
 
@@ -20,6 +21,7 @@ const Part2 = (props: Props) => {
         </div>
         <VisualCommunication />
         <TopicCommunication />
+        <PersonCommunication />
       </div>
     </div>
   )
