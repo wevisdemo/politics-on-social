@@ -37,7 +37,7 @@ const MentionCommunication = (props: Props) => {
         <ChartCompetitor />
         <div className='wv-font-anuphan leading-[15px]
          my-[10px] mb-[60px] mx-auto text-mobile-regular-b5 text-center opacity-50'>
-          พรรคที่โพสต์
+          พรรคที่ถูกพูดถึง
         </div>
       </div>
     </div>
