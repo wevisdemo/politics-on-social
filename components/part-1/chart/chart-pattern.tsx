@@ -9,24 +9,20 @@ const PatternItem = ({ data }: { data: typeof CHART_PATTERN_COLLECTION[number] }
       <div className='flex flex-row justify-between items-center mb-[11px]'>
         <div className='wv-font-anuphan wv-font-bold text-mobile-bold-b3 leading-[27px]'>{data.party}</div>
         <div className='mx-[3px] wv-font-anuphan
+            flex flex-row gap-x-[10px] 
             text-mobile-regular-b7 leading-[15px] items-center gap-1 opacity-60'>
-          <div className='flex flex-row justify-between'>
+          <div className='flex flex-row justify-between items-center gap-x-[3px]'>
+            <div className='w-[8px] h-[8px] bg-black border-[0.5px] border-gray' />
             <div>
-              0
-            </div>
-            <div>
-              {data.max}
+              min: 0
             </div>
           </div>
-          <svg width={37} height={4} viewBox="0 0 37 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.25" y="0.25" width="36.5" height="3.5" fill="url(#paint0_linear_216_353247)" stroke="#C5C5C5" strokeWidth="0.5" />
-            <defs>
-              <linearGradient id="paint0_linear_216_353247" x1={37} y1={4} x2={0} y2={4} gradientUnits="userSpaceOnUse">
-                <stop stopColor="#88FFCC" />
-                <stop offset={1} stopColor="#88FFCC" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-          </svg>
+          <div className='flex flex-row justify-between items-center gap-x-[3px]'>
+            <div className='w-[8px] h-[8px] bg-green border-[0.5px] border-gray' />
+            <div>
+              max: {data.max}
+            </div>
+          </div>
         </div>
       </div>
       <div className='desktop:hidden'>
@@ -40,7 +36,7 @@ const PatternItem = ({ data }: { data: typeof CHART_PATTERN_COLLECTION[number] }
         {data.keyEvent.map((event, index) => (
           <div key={`event-${data.party}-${index}`}
             className='text-left mb-2'>
-            {index + 1}. {event.event} <span className='opacity-60'>({event.date})</span> : {event.description}&nbsp;<a href={event.link} target="_blank" rel="noreferrer" className='text-green  hover:underline'>(ตัวอย่างโพส)</a>
+            {index + 1}. {event.event} <span className='opacity-60'>({event.date})</span> : {event.description}&nbsp;<a href={event.link} target="_blank" rel="noreferrer" className='text-green  hover:underline'>(คลิกดูตัวอย่างโพส)</a>
           </div>
         ))}
       </div>
@@ -14935,40 +14931,32 @@ const ChartPattern = (props: Props) => {
       <div className='wv-font-anuphan wv-font-bold
             mt-[30px] mb-[5px]
             leading-[31.5px] text-mobile-bold-b2'>
-        เปรียบเทียบช่วงเวลาที่แต่ละพรรคขยันโพสต์
+        5 วันที่แต่ละพรรคขยันโพสต์ที่สุด
       </div>
-      <div className='flex flex-row wv-font-anuphan
+      <div className='wv-font-anuphan
+            mb-[5px]
+            leading-[27px] text-mobile-regular-b4'>
+        สะท้อนตัวอย่างวาระที่พรรคให้ความสำคัญ
+      </div>
+      <div className='flex flex-col wv-font-anuphan
+            tablet:flex-row
             text-mobile-regular-b7 leading-[15px] items-center gap-1 opacity-60'>
         <div>
-          จำนวนโพสต์ต่อวันที่น้อยที่สุดของพรรค
+          ความเข้มสีเขียว แสดงจำนวนโพสต์ต่อวัน :
         </div>
-        <svg width={13} height={6} viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13 3L8 0.113249V5.88675L13 3ZM0 3.5L8.5 3.5V2.5L0 2.5L0 3.5Z" fill="white" />
-        </svg>
-        <div className='mx-[3px]'>
-          <div className='flex flex-row justify-between'>
+        <div>
+          <div className='flex flex-row justify-between items-center gap-x-[3px]'>
+            <div className='w-[8px] h-[8px] bg-black border-[0.5px] border-gray' />
             <div>
-              x
-            </div>
-            <div>
-              xx
+              = จำนวนโพสต์น้อย
             </div>
           </div>
-          <svg width={37} height={4} viewBox="0 0 37 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.25" y="0.25" width="36.5" height="3.5" fill="url(#paint0_linear_216_353247)" stroke="#C5C5C5" strokeWidth="0.5" />
-            <defs>
-              <linearGradient id="paint0_linear_216_353247" x1={37} y1={4} x2={0} y2={4} gradientUnits="userSpaceOnUse">
-                <stop stopColor="#88FFCC" />
-                <stop offset={1} stopColor="#88FFCC" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <svg width={13} height={6} viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 3L5 5.88675V0.113249L0 3ZM4.5 3.5L13 3.5V2.5L4.5 2.5V3.5Z" fill="white" />
-        </svg>
-        <div>
-          จำนวนโพสต์ต่อวันที่มากที่สุดของพรรค
+          <div className='flex flex-row justify-between items-center gap-x-[3px]'>
+            <div className='w-[8px] h-[8px] bg-green border-[0.5px] border-gray' />
+            <div>
+              = จำนวนโพสต์มาก
+            </div>
+          </div>
         </div>
       </div>
       <div className='mt-[32px]'>

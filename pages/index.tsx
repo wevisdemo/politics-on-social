@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 export default Home
 
 
-// const TIMELINE_COLLECTION = [
+// const GOVERNMENT = [
 //   {
 //     party: "พลังประชารัฐ",
 //     content: "",
@@ -45,6 +45,8 @@ export default Home
 //     party: "ประชาธิปัตย์",
 //     content: "",
 //   },
+// ]
+// const OPPOSITION = [
 //   {
 //     party: "เพื่อไทย",
 //     content: "",

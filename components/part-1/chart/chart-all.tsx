@@ -107,6 +107,8 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
             </div>
             <div>
               <div className='flex gap-[5px] justify-start'>
+                <div className='wv-font-anuphan
+             opacity-60'>เฉลี่ย</div>
                 <div>{getAvg(data)}</div>
                 <div className='wv-font-anuphan
              opacity-60'>โพสต์/วัน</div>

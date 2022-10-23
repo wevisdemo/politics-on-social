@@ -589,7 +589,7 @@ const PersonCommunication = (props: Props) => {
         </div>
       </div>
       <div className='wv-font-anuphan leading-[15px]
-         my-[10px] mb-[60px] w-[280px] mx-auto text-mobile-regular-b7 text-center opacity-50'>
+         my-[10px] mb-[60px] w-[280px] mx-auto text-desktop-regular-b7 text-center opacity-50'>
         คำนวณ % จากจำนวนโพสต์ที่ในแคปชันมี<br /><span className='underline text-green'>ชื่อสมาชิกพรรคคนสำคัญ</span> ต่อจำนวนโพสต์ทั้งหมดของ<br />แต่ละพรรค โดย 1 โพสต์สามารถมีได้มากกว่า 1 ชื่อ
       </div>
       <div className='flex flex-col items-center tablet:flex-row my-[30px] 
