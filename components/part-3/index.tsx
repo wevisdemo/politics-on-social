@@ -137,7 +137,7 @@ const Part3 = (props: Props) => {
           มาดูกันว่าสิ่งที่พรรคให้ความสำคัญนั้น สอดคล้องกับความสนใจของชาวโซเชียลหรือไม่
         </div>
         <div className="w-[300px] py-[15px] px-[13.5px] bg-black-2 mx-auto">
-          <div className="wv-font-anuphan wv-font-bold text-mobile-bold-b6 mb-[10px] text-center mx-auto">วิธีอ่าน&nbsp;&nbsp;&nbsp;&nbsp;</div>
+          <div className="wv-font-anuphan wv-font-bold text-mobile-bold-b6 mb-[10px] text-center mx-auto">วิธีอ่าน</div>
           <div className="flex flex-row justify-center items-baseline gap-x-[10px]">
             <div className="w-[120px] flex flex-col justify-end items-end text-right">
               <svg className="w-[35px] h-[35px] mb-[10px]" viewBox="0 0 36 35" fill="none" xmlns="http://www.w3.org/2000/svg">

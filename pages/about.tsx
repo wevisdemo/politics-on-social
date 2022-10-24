@@ -20,37 +20,73 @@ const About = (props: Props) => {
       <WvContainer heading="เกี่ยวกับโครงการ">
         <WvParagraphGroup heading="เป้าหมาย">
           <p>
-            dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry`s standard dummy text ever since the 1500s, when an
-            unknown printer took a galley of type and scrambled it to make a type
-            specimen book. It has survived not only five centuries, but also the
-            leap into electronic typesetting, remaining essentially unchanged. It
-            was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem
-            Ipsum.
+            การสื่อสารผ่านสื่อสังคมออนไลน์ (Social Media) คือหนึ่งทางสำคัญสำหรับของพรรคการเมืองในการสื่อสารทางการเมืองไปยังประชาชนได้อย่างรวดเร็ว ซึ่งพรรคการเมืองมีช่องทางและแนวทางสำหรับการสื่อสารที่ต่างกันออกไป โดยเรื่องนี้สามารถแสดงให้เห็นว่า แต่ละพรรคต้องการสื่อสารเรื่องอะไร ในปริมาณเท่าใด รวมถึงสิ่งที่สื่อสารเหล่านั้นไปถึงคนในโลกออนไลน์มากน้อยเพียงใด
+          </p>
+          <p>
+            WeVis ขอชวนทุกคนร่วมเดินทางผ่านข้อมูลจากช่องทางออนไลน์ 3 ทางหลักของพรรคการเมือง ได้แก่ Facebook , Twitter และ YouTube เพื่อทำความรู้จักแนวทางการสื่อสารในโลกออนไลน์ของ 6 พรรคการเมือง ที่แบ่งเป็น 3 พรรคการเมืองฝ่ายรัฐบาลที่มี ส.ส. ในสภามากที่สุด ได้แก่ พรรคพลังประชารัฐ พรรคภูมิใจไทย และพรรคประชาธิปัตย์ และ 3 พรรคการเมืองฝ่ายค้านที่มี ส.ส. ในสภามากที่สุด ได้แก่ พรรคเพื่อไทย พรรคอนาคตใหม่/ก้าวไกล และพรรคเสรีรวมไทย ผ่าน 3 ประเด็นหลักที่น่าสนใจ
           </p>
         </WvParagraphGroup>
-
+        <WvParagraphGroup heading="ที่มาของข้อมูล">
+          <ol>
+            <li>สำหรับข้อมูลการ Post และจำนวน Engagement ใน Official Account 3 ช่องทางหลัก ได้แก่ Facebook , Twitter และ YouTube ของ 6 พรรคการเมือง ซึ่งเก็บข้อมูลช่วงระหว่างวันที่ 1 พ.ค. 2562 ถึง 31 ส.ค. 2565 ทาง WeVis ขอขอบคุณบริษัท Wisesight สำหรับการสนับสนุนข้อมูลที่เป็นประโยชน์กับโปรเจกต์นี้อย่างละเอียด และครบถ้วนที่สุดเท่าที่จะเป็นไปได้</li>
+            <li>สำหรับข้อมูลภาพปก (Cover Photo) จาก Facebook ของพรรคการเมือง เป็นการเก็บข้อมูลช่วงระหว่างวันที่ 1 พ.ค. 2562 ถึง 31 ส.ค. 2565 จาก Official Account ของ 6 พรรคการเมือง ได้แก่
+              <ul>
+                <li>Facebook พรรคพลังประชารัฐ</li>
+                <li>Facebook พรรคภูมิใจไทย</li>
+                <li>Facebook พรรคประชาธิปัตย์</li>
+                <li>Facebook พรรคเพื่อไทย</li>
+                <li>Facebook พรรคอนาคตใหม่</li>
+                <li>Facebook พรรคก้าวไกล</li>
+                <li>Facebook พรรคเสรีรวมไทย</li>
+              </ul>
+            </li>
+          </ol>
+        </WvParagraphGroup>
+        <WvParagraphGroup heading="นโยบายการนำข้อมูลไปใช้ต่อ">
+          <p>ทางทีมมีความตั้งใจที่พัฒนาทุกโปรเจ็กต์ให้เป็น Open Source และเปิดข้อมูลเป็น Open Data ภายใต้เงื่อนไข Creative Commons Attribution-ShareAlike License คือสามารถนำไปเผยแพร่และดัดแปลงได้ โดยต้องระบุที่มา แต่ห้ามนำไปใช้เพื่อการค้า และต้องเผยแพร่งานดัดแปลงโดยใช้สัญญาอนุญาตชนิดเดียวกัน</p>
+          <p>หากมีข้อสงสัยต้องการสอบถามเพิ่มเติม ประสงค์แจ้งเปลี่ยนแปลงหรือเพิ่มเติมข้อมูลเพื่อความถูกต้อง หรือมีข้อเสนอแนะใดๆ สามารถติดต่อได้ที่ team@punchup.world</p>
+        </WvParagraphGroup>
         <WvParagraphGroup heading="อาสาสมัครร่วมพัฒนา">
           <WvParagraphGroup small="true" heading="เขียนโปรแกรม">
             <p>
-              dummy text of the printing and typesetting industry. Lorem Ipsum has
-              been the industry`s standard dummy text ever since the 1500s, when an
-              unknown printer took a galley
+              Worawit Roengruen
             </p>
           </WvParagraphGroup>
+          <WvParagraphGroup small="true" heading="ออกแบบ">
+            <p>
+              น้ำใส ศุภวงศ์
+            </p>
+          </WvParagraphGroup>
+          <WvParagraphGroup small="true" heading="สืบค้นและรวบรวมข้อมูล">
+            <p>
+              สิทธิกานต์ ธีระวัฒนชัย, <a href='https://wisesight.com'>Wisesight</a>
+            </p>
+          </WvParagraphGroup>
+          <WvParagraphGroup small="true" heading="บรรณาธิการ">
+            <p>
+              ธนิสรา เรืองเดช
+            </p>
+          </WvParagraphGroup>
+          <WvParagraphGroup small="true" heading="ประสานงานและจัดการอื่นๆ">
+            <p>
+              Punch Up
+            </p>
+          </WvParagraphGroup>
+          <WvParagraphGroup>
+            <p>โปรเจกต์ “ส่องเพจพรรค การเมืองถูกสื่อสารทางออนไลน์อย่างไร ?” ได้รับการสนับสนุนทุนในการดำเนินงานจาก <a href='https://www.ned.org'>National Endowment for Democracy (NED)</a> ซึ่งนำมาใช้เป็นต้นทุนในการรวมรวมข้อมูล ออกแบบ พัฒนาเว็บไซต์ ประสานงาน บริหารจัดการ ตลอดจนการจัด Meetup เพื่อดำเนินโครงการ</p>
+          </WvParagraphGroup>
         </WvParagraphGroup>
-
         <WvButtonGroup center="true">
           <WvButton
-          ><svg
-            width="21"
-            height="21"
-            viewBox="0 0 21 21"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
           >
+            {/* https://drive.google.com/drive/folders/1Ytxy7exTpVKEvIsX0MJSBbfgTsKi-spW */}
+            <svg
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <g clip-path="url(#clip0_314_173)">
                 <path
                   d="M7.03582 2.86356H1.17529V19.4081H19.8247V2.86356C19.8247 2.86356 15.306 2.86356 13.9642 2.86356"
