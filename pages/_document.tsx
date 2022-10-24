@@ -1,4 +1,5 @@
-
+import WvNavbar from '@wevisdemo/ui/components/navbar';
+import WvFooter from '@wevisdemo/ui/components/footer';
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -11,7 +12,9 @@ export default function Document() {
         />
       </Head>
       <body className='scroll-smooth'>
+        <WvNavbar title="politic" dark={true} />
         <Main />
+        <WvFooter />
         <NextScript />
       </body>
     </Html>
