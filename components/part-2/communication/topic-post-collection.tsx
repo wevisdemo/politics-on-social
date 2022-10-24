@@ -486,7 +486,7 @@ const TopicPostCollection = ({ topic }: {
         posturl, }) => (
         <a key={`${party}-${topic}`}
           className='min-w-[260px] bg-white rounded-[5px] p-[15px] h-auto'
-          href={posturl}>
+          href={posturl} target="_blank" rel='noreferrer'>
           <div className='flex flex-row justify-between'>
             <div className='flex flex-row items-center'>
               <div>{getLogo(party)}</div>
@@ -496,7 +496,7 @@ const TopicPostCollection = ({ topic }: {
              text-mobile-regular-b7 text-black opacity-60'>
               {moment(postdate).locale('th').format('ll')}
             </div>
-          </div>
+          </div >
           <div className='wv-font-anuphan text-left break-words 
              text-mobile-regular-b5 text-black opacity-60 overflow-scroll max-h-[210px]
              border-b-[1px] border-gray mt-[5px] pb-[10px]'>
@@ -511,9 +511,9 @@ const TopicPostCollection = ({ topic }: {
               {`${postreaction} reactions + ${postcomment} comments + ${postshare} shares`}
             </div>
           </div>
-        </a>
+        </a >
       ))}
-    </div>
+    </div >
   )
 }
 
