@@ -7,9 +7,6 @@ import WvButtonGroup from '@wevisdemo/ui/components/button-group';
 import WvButton from '@wevisdemo/ui/components/button';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-
-import "@wevisdemo/ui/styles/components.css";
-import "@wevisdemo/ui/styles/typography.css";
 import React from 'react'
 
 type Props = {}

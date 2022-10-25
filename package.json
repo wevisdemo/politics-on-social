@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@wevisdemo/ui": "^4.1.0",
+    "@wevisdemo/ui": "^4.1.1",
     "d3-scale": "^4.0.2",
     "moment": "^2.29.4",
     "next": "12.3.1",
