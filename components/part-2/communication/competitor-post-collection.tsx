@@ -408,7 +408,7 @@ const CompetitorPostCollection = ({ party }: {
             </div>
             <div className=' mt-[5px]'>
               <div className='flex items-start text-black gap-x-[5px]'>
-                <div className='wv-font-anuphan wv-font-bold text-mobile-bold-b6'>{postengagement}</div>
+                <div className='wv-font-anuphan wv-font-bold wv-b6'>{postengagement}</div>
                 <div className='wv-font-anuphan text-mobile-regular-b6'>Engagement</div>
               </div>
               <div className='wv-font-anuphan text-mobile-regular-b7 text-black opacity-70 text-left'>

@@ -493,21 +493,21 @@ const TopicPostCollection = ({ topic }: {
               <div className='-ml-[5px]'>{getPostChanelLogo(postchannel)}</div>
             </div>
             <div className='wv-font-anuphan 
-             text-mobile-regular-b7 text-black opacity-60'>
+             wv-b7 text-black opacity-60'>
               {moment(postdate).locale('th').format('ll')}
             </div>
           </div >
           <div className='wv-font-anuphan text-left break-words 
-             text-mobile-regular-b5 text-black opacity-60 overflow-scroll max-h-[210px]
+             wv-b5 text-black opacity-60 overflow-scroll max-h-[210px]
              border-b-[1px] border-gray mt-[5px] pb-[10px]'>
             {postmessage}
           </div>
           <div className=' mt-[5px]'>
             <div className='flex items-start text-black gap-x-[5px]'>
-              <div className='wv-font-anuphan wv-font-bold text-mobile-bold-b6'>{postengagement}</div>
-              <div className='wv-font-anuphan text-mobile-regular-b6'>Engagement</div>
+              <div className='wv-font-anuphan wv-font-bold wv-b6'>{postengagement}</div>
+              <div className='wv-font-anuphan wv-b6'>Engagement</div>
             </div>
-            <div className='wv-font-anuphan text-mobile-regular-b7 text-black opacity-70 text-left'>
+            <div className='wv-font-anuphan wv-b7 text-black opacity-70 text-left'>
               {`${postreaction} reactions + ${postcomment} comments + ${postshare} shares`}
             </div>
           </div>
