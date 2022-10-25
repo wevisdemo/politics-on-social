@@ -1,13 +1,8 @@
-import WvNavbar from '@wevisdemo/ui/components/navbar';
-import WvFooter from '@wevisdemo/ui/components/footer';
-import WvContainer from '@wevisdemo/ui/components/container'
-import WvParagraphGroup from '@wevisdemo/ui/components/paragraph-group'
-import WvSharer from '@wevisdemo/ui/components/sharer';
-import WvButtonGroup from '@wevisdemo/ui/components/button-group';
 import WvButton from '@wevisdemo/ui/components/button';
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import React from 'react'
+import WvButtonGroup from '@wevisdemo/ui/components/button-group';
+import WvContainer from '@wevisdemo/ui/components/container';
+import WvParagraphGroup from '@wevisdemo/ui/components/paragraph-group';
+import WvSharer from '@wevisdemo/ui/components/sharer';
 
 type Props = {}
 
