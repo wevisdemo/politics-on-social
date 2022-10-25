@@ -2,10 +2,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import WvSharer from '@wevisdemo/ui/components/sharer';
-import "@wevisdemo/ui/styles/components.css";
-import "@wevisdemo/ui/styles/typography.css";
-
 import Intro from '../components/intro';
 import PartNav from '../components/part-nav';
 import Part1 from '../components/part-1';
