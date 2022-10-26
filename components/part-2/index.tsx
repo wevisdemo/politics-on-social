@@ -2,7 +2,7 @@ import React from 'react'
 import MentionCommunication from './communication/mention-communication'
 import PersonCommunication from './communication/person-communication'
 import TopicCommunication from './communication/topic-communication'
-import VisualCommunication from './communication/visual-communication'
+import VisualCommunication from './communication/visual/visual-communication'
 
 type Props = {}
 
