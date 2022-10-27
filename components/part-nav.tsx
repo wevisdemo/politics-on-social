@@ -21,13 +21,15 @@ const NAV_COLLECTION = [
 
 const PartNav = (props: Props) => {
   return (
-    <div className='p-[20px]'>
+    <div className='p-[20px] flex flex-col divide-y
+      tablet:flex-row tablet:divide-x-[0.5px] tablet:divide-y-0'>
       {
         NAV_COLLECTION.map((data, index) => (
           <button key={`nav-${data.view}`}
-            className='w-full pb-[10px] mb-[10px] border-b-gray-2 border-b-[1px]'
+            className='w-full pb-[10px] mb-[10px]'
             onClick={() => scrollInToView(data.view)}>
-            <div className='flex flex-row '>
+            <div className='flex flex-row
+              tablet:flex-col tablet:items-center tablet:justify-center tablet:gap-y-[10px]'>
               <div className='wv-font-anuphan wv-font-bold
                 w-[25px] h-[25px] rounded-full border-green border-[1px]
                 mr-[10px]
@@ -35,7 +37,9 @@ const PartNav = (props: Props) => {
                 {index + 1}
               </div>
               <div className='wv-font-anuphan wv-font-bold mr-auto
-                text-mobile-bold-b2 leading-[31.5px] text-left'>
+                text-mobile-bold-b2 leading-[31.5px] text-left
+                tablet:text-desktop-bold-b2 tablet:leading-[36px]
+                tablet:text-center tablet:mr-0'>
                 {data.name}
               </div>
               <svg width={16} height={21} viewBox="0 0 16 21" fill="none" xmlns="http://www.w3.org/2000/svg">

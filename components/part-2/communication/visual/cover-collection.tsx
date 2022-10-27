@@ -1180,12 +1180,14 @@ const PartyCoverCollection = ({ collection, counter }: { collection: typeof COVE
           <div>
             {getLogo(collection.party)}
           </div>
-          <div className='wv-font-anuphan text-mobile-bold-b7'>
+          <div className='wv-font-anuphan text-mobile-bold-b7
+          tablet:text-desktop-bold-b7 tablet:leading-[18px]'>
             {collection.party}
           </div>
         </div>
-        <div className='wv-font-anuphan text-mobile-regular-b7 text-green'>
-          <span className='wv-font-bold'>{selectIndex + 1}</span>{`/${collection.images.length}`}
+        <div className='wv-font-anuphan text-mobile-regular-b7 text-green
+        tablet:text-desktop-regular-b7 tablet:leading-[18px]'>
+          <span className='wv-font-bold'>{selectIndex + 1}</span><span className='wv-font-regular opacity-50'>{`/${collection.images.length}`}</span>
         </div>
       </div>
       <div className={`${collection.images[selectIndex].bg} bg-cover bg-center bg-no-repeat 
@@ -1304,16 +1306,19 @@ const CoverCollection = ({ party }: { party: string }) => {
         <div>
           {/* {!isPlaying ? "start" : "stop"} {counter} */}
 
-          <div className='wv-font-anuphan wv-font-bold text-mobile-bold-b4 text-center mb-[20px]'>
+          <div className='wv-font-anuphan wv-font-bold text-mobile-bold-b4 text-center mb-[20px]
+          tablet:text-desktop-bold-b4 tablet:leading-[27px] '>
             {minDate.add(counter, "day").locale('th').format('ll')}
           </div>
 
           <div className='flex flex-row justify-around px-[12px] mx-auto
-            w-full'>
-            <div className="w-[128px] ">
+            w-full
+            tablet:justify-center'>
+            <div className="w-[128px] tablet:w-auto tablet:max-w-[350px] tablet:mr-[20px]">
               <div className="flex flex-row gap-x-[5px] opacity-60 mb-[10px]">
                 <HeadDecorationLeft />
-                <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 ">
+                <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 leading-[18px]
+                tablet:text-desktop-bold-b6 tablet:leading-[21px]">
                   ฝ่ายรัฐบาล
                 </div>
                 <HeadDecorationRight />
@@ -1323,10 +1328,11 @@ const CoverCollection = ({ party }: { party: string }) => {
               <PartyCoverCollection collection={COVER_COLLECTION[2]} counter={counter} />
             </div>
             <div className='border-[.5px] border-white border-dashed' />
-            <div className="w-[128px] ">
+            <div className="w-[128px] tablet:w-auto tablet:max-w-[350px] tablet:ml-[20px]">
               <div className="flex flex-row gap-x-[5px] opacity-60 mb-[10px]">
                 <HeadDecorationLeft />
-                <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 ">
+                <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 leading-[18px]
+                tablet:text-desktop-bold-b6 tablet:leading-[21px]">
                   ฝ่ายค้าน
                 </div>
                 <HeadDecorationRight />

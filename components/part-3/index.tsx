@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, UIEvent } from 'react'
 import { HeadDecorationLeft, HeadDecorationRight } from "../utils"
 import ScrollableArrow from '../utils/scrollable-arrow'
 
@@ -45,7 +45,7 @@ const CHART_OPPOSITION = [
   },
 ]
 
-const renderChart = (title: string) => {
+const RenderChart: React.FC<{ title: string }> = ({ title }) => {
   const getTitle = (title) => {
     switch (title) {
       case "topic": return "ด้านเนื้อหา";
@@ -66,7 +66,7 @@ const renderChart = (title: string) => {
         break;
     }
   }
-  const [showArrow, setShowArrow] = useState(true)
+  const [showArrow, setShowArrow] = useState<boolean>(true)
 
   return (
     <div className="relative mt-[56px] ml-[20px]">
@@ -75,7 +75,11 @@ const renderChart = (title: string) => {
         {getTitle(title)}
       </div>
       <div className="flex flex-row tablet:justify-center divide-x overflow-x-scroll scrollbar-hide pr-[20px]"
-        onScroll={(e: BaseSyntheticEvent) => setShowArrow(e.target.offsetWidth + e.target.scrollLeft < e.target.scrollWidth)}>
+        onScroll={(e: UIEvent<HTMLDivElement>) => {
+          const target: EventTarget = e.target
+          const targetDiv = target as HTMLDivElement
+          setShowArrow(targetDiv.offsetWidth + targetDiv.scrollLeft < targetDiv.scrollWidth)
+        }}>
         <div className="pr-[20px]">
           <div className="flex flex-row gap-x-[5px] opacity-60">
             <HeadDecorationLeft />
@@ -132,7 +136,9 @@ const Part3 = (props: Props) => {
           <div className='wv-font-anuphan wv-font-bold
             w-[25px] h-[25px] rounded-full bg-green mb-[10px]
             mx-auto
-            text-mobile-bold-b4 leading-[24px] text-black'>
+            text-mobile-bold-b4 leading-[24px] text-black
+            tablet:text-desktop-bold-b4 tablet:leading-[30px]
+            tablet:w-[30px] tablet:h-[30px]'>
             3
           </div>
           <div className='wv-font-kondolar wv-font-bold
@@ -205,9 +211,9 @@ const Part3 = (props: Props) => {
             *หมายเหตุ : จำนวน engagement = like + comment + share ซึ่งอาจเป็นไปได้ทั้งแง่บวกและลบ
           </div>
         </div>
-        {renderChart("topic")}
-        {renderChart("member")}
-        {renderChart("competitor")}
+        <RenderChart title="topic" />
+        <RenderChart title="member" />
+        <RenderChart title="competitor" />
       </div>
     </div>
   )

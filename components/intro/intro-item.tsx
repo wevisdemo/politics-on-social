@@ -5,19 +5,23 @@ const IntroItem = ({ party, facebook, twitter, youtube, videoIndex }: INTRO_PART
   return (
     <div>
       <video autoPlay={true} loop={true} muted={true} src={`/design_assets/mp4/${videoIndex}.mp4`}
-        className={`w-[92.8px] h-[187.16px] rounded-[5px]  mb-[10px]`} />
+        className={`w-[92.8px] h-[187.16px] rounded-[5px]  mb-[10px]
+        desktop:w-[198.33px] desktop:h-[400px] desktop:mb-[14px]`} />
       <div>
         <div className='wv-font-anuphan wv-font-bold
-        text-mobile-bold-b7'>
+        text-mobile-bold-b7 leading-[15px]
+        tablet:text-desktop-bold-b7 tablet:leading-[18px]'>
           {party}
         </div>
         <div className='wv-font-anuphan
-        text-mobile-regular-b7 opacity-60 leading-[15px]'>
+        text-mobile-regular-b7 opacity-60 leading-[15px]
+        tablet:text-desktop-regular-b7 tablet:leading-[18px]'>
           จำนวนผู้ติดตาม (K)
         </div>
         <div className='flex flex-row gap-x-[8px] mt-[2px]
         wv-font-anuphan
         text-mobile-regular-b7 text-gray
+        tablet:text-desktop-regular-b7 tablet:leading-[18px]
         '>
           {facebook && <div>
             <svg width={11} height={11} viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">

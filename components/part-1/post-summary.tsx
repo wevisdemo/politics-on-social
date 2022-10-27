@@ -54,58 +54,47 @@ const PostSummary = (props: Props) => {
   const [openDropdown, setOpenDropdown] = useState(false)
   return (
     <div>
-      <div className='wv-font-anuphan wv-font-bold
-       text-mobile-bold-b4 leading-[24px] mb-[3px]'>
-        จำนวนโพสต์ในแต่ละวันจาก
-      </div>
-      <div >
-        <div className="relative inline-block text-left border-[1px] border-white w-[200px] mx-auto p-[10px]
-         wv-font-anuphan wv-font-bold text-desktop-bold-b6">
-          <div>
-            <button type="button"
-              className="inline-flex w-full justify-between items-center"
-              onClick={() => setOpenDropdown(!openDropdown)}
-            >
-              {DROPDOWN_COLLECTION[selectedItem].item}
-              <svg width={12} height={9} viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 9L0.803847 -9.78799e-07L11.1962 -7.02746e-08L6 9Z" fill="white" />
-              </svg>
-            </button>
-          </div>
-          <div className={`absolute right-0 left-0 z-20 w-full h-auto mt-3  bg-white text-black
+      <div className='flex flex-col items-center justify-center
+       tablet:flex-row tablet:gap-x-[7px]'>
+        <div className='wv-font-anuphan wv-font-bold
+       text-mobile-bold-b4 leading-[24px] mb-[3px]
+       tablet:text-desktop-bold-b4 tablet:leading-[27px]'>
+          จำนวนโพสต์ในแต่ละวันจาก
+        </div>
+        <div >
+          <div className="relative inline-block text-left border-[1px] border-white w-[200px] mx-auto p-[10px]
+         wv-font-anuphan wv-font-bold text-desktop-bold-b6 leading-[21px]">
+            <div>
+              <button type="button"
+                className="inline-flex w-full justify-between items-center"
+                onClick={() => setOpenDropdown(!openDropdown)}
+              >
+                {DROPDOWN_COLLECTION[selectedItem].item}
+                <svg width={12} height={9} viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 9L0.803847 -9.78799e-07L11.1962 -7.02746e-08L6 9Z" fill="white" />
+                </svg>
+              </button>
+            </div>
+            <div className={`absolute right-0 left-0 z-20 w-full h-auto mt-3  bg-white text-black
           flex flex-col justify-start
           ${openDropdown ? 'show' : 'hidden'}`} >
-            {DROPDOWN_COLLECTION.map((data, index) => (
-              <button key={`dropdown-item-${index}`}
-                className='p-[10px]'
-                onClick={() => { setSelectedItem(index); setOpenDropdown(false) }}>
-                {data.item}
-              </button>
-            ))}
+              {DROPDOWN_COLLECTION.map((data, index) => (
+                <button key={`dropdown-item-${index}`}
+                  className='p-[10px]'
+                  onClick={() => { setSelectedItem(index); setOpenDropdown(false) }}>
+                  {data.item}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-      <div className='mt-[34px] px-[17px]'>
-        {selectedItem === 0 &&
-          <div>
-            <ChartAll type="all" />
-          </div>
-        }
-        {selectedItem === 1 &&
-          <div>
-            <ChartAll type="facebook" />
-          </div>
-        }
-        {selectedItem === 2 &&
-          <div>
-            <ChartAll type="twitter" />
-          </div>
-        }
-        {selectedItem === 3 &&
-          <div>
-            <ChartAll type="youtube" />
-          </div>
-        }
+      <div className='mt-[34px] px-[17px]
+      tablet:mt-[45px]'>
+        {selectedItem === 0 && <ChartAll type="all" />}
+        {selectedItem === 1 && <ChartAll type="facebook" />}
+        {selectedItem === 2 && <ChartAll type="twitter" />}
+        {selectedItem === 3 && <ChartAll type="youtube" />}
       </div>
     </div >
   )
