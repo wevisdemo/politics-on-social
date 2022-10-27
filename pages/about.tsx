@@ -69,51 +69,54 @@ const About = (props: Props) => {
           </WvParagraphGroup>
         </WvParagraphGroup>
         <WvButtonGroup center="true">
-          <WvButton
-          >
-            {/* https://drive.google.com/drive/folders/1Ytxy7exTpVKEvIsX0MJSBbfgTsKi-spW */}
-            <svg
-              width="21"
-              height="21"
-              viewBox="0 0 21 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <a href="https://drive.google.com/drive/folders/1Ytxy7exTpVKEvIsX0MJSBbfgTsKi-spW"
+            target="_blank" rel="noreferrer">
+            <WvButton color="blue"
             >
-              <g clip-path="url(#clip0_314_173)">
-                <path
-                  d="M7.03582 2.86356H1.17529V19.4081H19.8247V2.86356C19.8247 2.86356 15.306 2.86356 13.9642 2.86356"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
-                />
-                <path
-                  d="M16.0317 8.65536L10.7284 13.9587L5.42513 8.65536"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-miterlimit="10"
-                />
-                <line
-                  x1="10.667"
-                  y1="0.5"
-                  x2="10.667"
-                  y2="13"
-                  stroke="currentColor"
-                  stroke-width="2"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_314_173">
-                  <rect
-                    width="20.8333"
-                    height="20"
-                    fill="white"
-                    transform="translate(0.0834961 0.5)"
+              {/* https://drive.google.com/drive/folders/1Ytxy7exTpVKEvIsX0MJSBbfgTsKi-spW */}
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_314_173)">
+                  <path
+                    d="M7.03582 2.86356H1.17529V19.4081H19.8247V2.86356C19.8247 2.86356 15.306 2.86356 13.9642 2.86356"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
                   />
-                </clipPath>
-              </defs>
-            </svg>
-            <div>ดาวน์โหลดข้อมูล</div>
-          </WvButton>
+                  <path
+                    d="M16.0317 8.65536L10.7284 13.9587L5.42513 8.65536"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                  />
+                  <line
+                    x1="10.667"
+                    y1="0.5"
+                    x2="10.667"
+                    y2="13"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_314_173">
+                    <rect
+                      width="20.8333"
+                      height="20"
+                      fill="white"
+                      transform="translate(0.0834961 0.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div>ดาวน์โหลดข้อมูล</div>
+            </WvButton>
+          </a>
           <WvButton>
             <img
               width="30"

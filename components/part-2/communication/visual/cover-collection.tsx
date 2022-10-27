@@ -1201,21 +1201,14 @@ const CoverCollection = ({ party }: { party: string }) => {
     bg?: string;
   }[]>([])
 
-  useEffect(() => {
-    if (party !== "เปรียบเทียบทุกพรรค") {
-      let COVER = COVER_COLLECTION.find((data) => data.party === party)
-      if (COVER)
-        setSelectedContent(COVER.images)
-    }
-  }, [party])
 
   // timer
   const [counter, setCounter] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
   const [timer, setTimer] = useState<ReturnType<typeof setInterval>>()
 
-  const minDate = moment("2019-05-1")
-  const maxDate = moment("2022-07-31")
+  const minDate = moment("2019-05-01", "YYYY-MM-DD")
+  const maxDate = moment("2022-07-31", "YYYY-MM-DD")
   const maxDayCount = maxDate.diff(minDate, "days") // 457 days
 
 
@@ -1241,10 +1234,14 @@ const CoverCollection = ({ party }: { party: string }) => {
   }, [counter, maxDayCount, stopTimer])
 
   useEffect(() => {
-    if (party !== "เปรียบเทียบทุกพรรค")
-      stopTimer()
+    if (party !== "เปรียบเทียบทุกพรรค") {
+      setCounter(0);
+      stopTimer();
+      let COVER = COVER_COLLECTION.find((data) => data.party === party)
+      if (COVER)
+        setSelectedContent(COVER.images)
+    }
   }, [party, stopTimer])
-
   // player
   const [barWidth, setBarWidth] = useState(0)
   const playerRef = useRef<HTMLDivElement>(null)
@@ -1270,9 +1267,30 @@ const CoverCollection = ({ party }: { party: string }) => {
   }
   return (
     <div>
+      <div className={`relative flex flex-row justify-between items-baseline  w-[630px] mx-auto mb-[12px]
+        ${party !== "เปรียบเทียบทุกพรรค" ? "opacity-50 pointer-events-none" : "pointer-events-auto"}
+      `} >
+        {!isPlaying ?
+          <svg className='cursor-pointer'
+            onClick={() => startTimer()} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="2" fill="white" />
+            <path d="M19 12L8.5 18.0622L8.5 5.93782L19 12Z" fill="#161616" />
+          </svg>
+          :
+          <svg className='cursor-pointer'
+            onClick={() => stopTimer()} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="2" fill="white" />
+            <rect x="7.5" y="6" width="3" height="12" fill="black" />
+            <rect x="13.5" y="6" width="3" height="12" fill="black" />
+          </svg>
+        }
+        <div ref={playerRef}>
+          <CoverChart minDate={minDate} maxDate={maxDate} maxDayCount={maxDayCount} counter={counter} handleClick={handleClick} />
+        </div>
+      </div>
       {party !== "เปรียบเทียบทุกพรรค" ?
         <div>
-          <div className='text-green'>{`เปลี่ยน ${selectedContent.length} ครั้ง`}</div>
+          <div className='wv-font-anuphan text-mobile-regular-b5 text-green mb-[30px] mt-[6px]'>เปลี่ยน <span className='wv-font-bold'>{`${selectedContent.length}`}</span> ครั้ง</div>
           <div className="flex flex-row flex-wrap justify-center gap-x-[5px] gap-y-[10px] ">
             {selectedContent.map((item) => (
               <div key={`content-${party}-${item.date}`} className={`${item.bg} bg-cover bg-center bg-no-repeat 
@@ -1293,26 +1311,6 @@ const CoverCollection = ({ party }: { party: string }) => {
           <div>
 
           </div> */}
-          <div className='relative flex flex-row justify-between items-baseline  w-[630px] mx-auto mb-[12px]' >
-            {!isPlaying ?
-              <svg className='cursor-pointer'
-                onClick={() => startTimer()} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="24" height="24" rx="2" fill="white" />
-                <path d="M19 12L8.5 18.0622L8.5 5.93782L19 12Z" fill="#161616" />
-              </svg>
-              :
-              <svg className='cursor-pointer'
-                onClick={() => stopTimer()} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="24" height="24" rx="2" fill="white" />
-                <rect x="7.5" y="6" width="3" height="12" fill="black" />
-                <rect x="13.5" y="6" width="3" height="12" fill="black" />
-              </svg>
-            }
-            <div ref={playerRef}>
-              <CoverChart minDate={minDate} maxDate={maxDate} maxDayCount={maxDayCount} counter={counter} handleClick={handleClick} />
-            </div>
-          </div>
-
           <div className='flex flex-col items-center justify-center w-[250px] mx-auto
           tablet:divide-x tablet:divide-dashed tablet:flex-row tablet:w-[560px]'>
             <div className="pr-[20px]">

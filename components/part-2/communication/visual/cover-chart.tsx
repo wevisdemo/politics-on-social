@@ -993,7 +993,7 @@ const CoverChart = ({ minDate, maxDate, maxDayCount, counter, handleClick }: Pro
               style={{
                 width: `${barDimension.barWidth}px`,
                 height: `${yScale(data.count)}px`,
-                left: `${xScale(moment(data.pos))}px`
+                left: `${xScale(data.pos)}px`
               }} />
           ))}
           <div className='absolute z-10 -bottom-[2px] w-full h-[2px] bg-gray cursor-pointer' onClick={(e) => { handleClick(e) }} />

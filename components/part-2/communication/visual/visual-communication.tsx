@@ -28,8 +28,9 @@ const VisualCommunication = (props: Props) => {
       text-center mx-auto my-[10px]'>
         First Impression
       </div>
-      <div className='wv-font-anuphan text-mobile-regular-b4 text-center'>
-        ภาพปก (ในที่นี้จะขอพิจารณาแค่ Facebook เพราะเป็นช่องทางที่ทุกพรรคมี) เป็นสิ่งแรกที่ทุกคนต้องเห็นเมื่อเข้ามาในเพจของแต่ละพรรค ซึ่งเปรียบเสมือนการแขวนป้ายไวนิลไว้หน้าตึก น่าสนใจว่าแต่ละพรรคส่งข้อความอะไรออกมาบ้างในแต่ละช่วงเวลา ผ่านภาพที่กระแทกตาเหล่านี้
+      <div className='wv-font-anuphan text-mobile-regular-b4 text-center mx-auto
+        tablet:max-w-[850px]'>
+        ภาพปก (พิจารณาเฉพาะทาง Facebook เพราะเป็นช่องทางที่ทุกพรรคมี) เป็นสิ่งแรกที่ทุกคนต้องเห็นเมื่อเข้ามาดูเพจของแต่ละพรรคการเมือง สิ่งนี้อาจเปรียบเสมือนป้ายไวนิลที่ถูกแขวนไว้หน้าอาคารที่ทำการพรรค ซึ่งสะท้อนว่า ในแต่ละช่วงเวลา พรรคส่งข้อความอะไรออกมาบ้าง ผ่านภาพที่แสดงให้เห็นเหล่านี้
       </div>
       <div className='my-[27px] flex flex-col tablet:flex-row justify-center items-center gap-x-[10px]'>
         <div className='wv-font-anuphan wv-font-bold leading-[21px] text-mobile-bold-b5'>ภาพปก Facebook</div>

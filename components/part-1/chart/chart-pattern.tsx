@@ -41,7 +41,7 @@ const PatternItem = ({ data }: { data: typeof CHART_PATTERN_COLLECTION[number] }
         ))}
       </div>
       <div className='wv-font-anuphan text-mobile-regular-b7 text-green cursor-pointer hover:underline text-left'>
-        + อ่านรายละเอียด
+        {!expand ? "+ อ่านรายละเอียด" : "- ปิดรายละเอียด"}
       </div>
     </div>
   )
@@ -14936,25 +14936,25 @@ const ChartPattern = (props: Props) => {
       <div className='wv-font-anuphan
             mb-[5px]
             leading-[27px] text-mobile-regular-b4'>
-        สะท้อนตัวอย่างวาระที่พรรคให้ความสำคัญ
+        สะท้อนตัวอย่างวาระที่พรรคสื่อสารมากบนโลกออนไลน์
       </div>
       <div className='flex flex-col wv-font-anuphan
-            tablet:flex-row
+            justify-center
             text-mobile-regular-b7 leading-[15px] items-center gap-1 opacity-60'>
-        <div>
-          ความเข้มสีเขียว แสดงจำนวนโพสต์ต่อวัน :
+        <div className='text-green'>
+          ความเข้มสีเขียว แสดงจำนวนโพสต์/วัน
         </div>
-        <div>
+        <div className='flex flex-row gap-x-[10px]'>
           <div className='flex flex-row justify-between items-center gap-x-[3px]'>
             <div className='w-[8px] h-[8px] bg-black border-[0.5px] border-gray' />
             <div>
-              = จำนวนโพสต์น้อย
+              = จำนวนโพสต์/วัน ที่น้อยที่สุดของพรรค
             </div>
           </div>
           <div className='flex flex-row justify-between items-center gap-x-[3px]'>
             <div className='w-[8px] h-[8px] bg-green border-[0.5px] border-gray' />
             <div>
-              = จำนวนโพสต์มาก
+              = จำนวนโพสต์/วัน ที่มากที่สุดของพรรค
             </div>
           </div>
         </div>

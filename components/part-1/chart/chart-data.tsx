@@ -4975,7 +4975,7 @@ export const GOVERNMENT = [
   },
   {
     name: "ประชาธิปัตย์",
-    logo: <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/ประชาธิปัติย์.png")] bg-contain bg-no-repeat bg-center' />,
+    logo: <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/ประชาธิปัตย์.png")] bg-contain bg-no-repeat bg-center' />,
     al: 17.72,
     fb: 9.35,
     tw: 6.34,

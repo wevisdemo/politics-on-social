@@ -2,13 +2,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import WvSharer from '@wevisdemo/ui/components/sharer';
+import dynamic from 'next/dynamic';
 
-import Intro from '../components/intro';
-import PartNav from '../components/part-nav';
-import Part1 from '../components/part-1';
-import Part2 from '../components/part-2';
-import Part3 from '../components/part-3';
+const Intro = dynamic(() => import('../components/intro'));
+const PartNav = dynamic(() => import('../components/part-nav'));
+const Part1 = dynamic(() => import('../components/part-1'));
+const Part2 = dynamic(() => import('../components/part-2'));
+const Part3 = dynamic(() => import('../components/part-3'));
+const Outro = dynamic(() => import('../components/outro'));
+
 
 const Home: NextPage = () => {
   return (
@@ -23,10 +25,8 @@ const Home: NextPage = () => {
       <Part1 />
       <Part2 />
       <Part3 />
-      <div className='flex justify-center my-[35px]'>
-        <WvSharer center="true" url="https://wevis.info" light={true} />
-      </div>
-    </div>
+      <Outro />
+    </div >
   )
 }
 
