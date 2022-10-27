@@ -72,7 +72,7 @@ const PostSummary = (props: Props) => {
               </svg>
             </button>
           </div>
-          <div className={`absolute right-0 left-0 z-10 w-full h-auto mt-3  bg-black
+          <div className={`absolute right-0 left-0 z-20 w-full h-auto mt-3  bg-white text-black
           flex flex-col justify-start
           ${openDropdown ? 'show' : 'hidden'}`} >
             {DROPDOWN_COLLECTION.map((data, index) => (
@@ -85,7 +85,7 @@ const PostSummary = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className='mt-[34px] mx-[17px]'>
+      <div className='mt-[34px] px-[17px]'>
         {selectedItem === 0 &&
           <div>
             <ChartAll type="all" />

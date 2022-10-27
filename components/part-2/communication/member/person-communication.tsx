@@ -615,9 +615,9 @@ const PersonCommunication = (props: Props) => {
         </svg>
         <div>คลิกที่รูป เพื่อดูตัวอย่างโพสต์ที่ได้รับความสนใจสูง</div>
       </div>
-      <div className='flex flex-col items-center justify-center w-[250px] mx-auto
+      <div className='flex flex-col justify-center items-center w-[250px] mx-auto
     tablet:divide-x  tablet:flex-row tablet:w-[560px]'>
-        <div className="pr-[20px]">
+        <div className="tablet:pr-[20px]">
           <div className="flex flex-row gap-x-[5px] opacity-60">
             <HeadDecorationLeft />
             <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 ">
@@ -639,7 +639,7 @@ const PersonCommunication = (props: Props) => {
             </div>
           ))}
         </div>
-        <div className="pl-[20px]">
+        <div className="mt-[20px] tablet:mt-0 tablet:pl-[20px]">
           <div className="flex flex-row gap-x-[5px] opacity-60">
             <HeadDecorationLeft />
             <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 ">

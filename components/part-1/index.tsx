@@ -14,7 +14,7 @@ const Part1 = (props: Props) => {
             text-mobile-bold-b4 leading-[24px] text-black'>
           1
         </div>
-        <div className='wv-font-kondolar wv-font-bold
+        <div className='wv-font-kondolar wv-font-bold mb-[26px]
             text-green leading-[45px] text-mobile-bold-h3'>
           พรรคขยันสื่อสาร<br />ทางออนไลน์<br />แค่ไหน
         </div>

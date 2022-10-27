@@ -412,9 +412,10 @@ const TOPIC_COMMUNICATION_POST = [
 
 ]
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef, SyntheticEvent, BaseSyntheticEvent } from 'react'
 import moment from 'moment'
 import 'moment/locale/th'
+import ScrollableArrow from '../../../utils/scrollable-arrow'
 
 
 type Props = {}
@@ -440,19 +441,6 @@ const TopicPostCollection = ({ topic }: {
     }
   }
 
-  const getTopicLogo = (topic: string) => {
-    switch (topic) {
-      case "โควิด": return <div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/covid.png")] bg-contain bg-center' />
-      case "เศรษฐกิจ": return <div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/economic.png")] bg-contain bg-center' />
-      case "กัญชา": return <div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/ganja.png")] bg-contain bg-center' />
-      case "ความเท่าเทียมทางเพศ": return <div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/lgbtq.png")] bg-contain bg-center' />
-      case "การชุมนุม": return <div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/movement.png")] bg-contain bg-center' />
-      case "สถาบันพระมหากษัตริย์": return <div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/royal.png")] bg-contain bg-center' />
-      default:
-        break;
-    }
-  }
-
   const getPostChanelLogo = (postchannel: string) => {
     switch (postchannel) {
       case "facebook": return <svg width={15} height={15} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -472,47 +460,53 @@ const TopicPostCollection = ({ topic }: {
     }
   }
 
+  const [showArrow, setShowArrow] = useState(true)
+
   return (
-    <div className='flex flex-row flex-nowrap gap-x-[10px] overflow-x-scroll items-baseline'>
-      {postItem.map(({ topic,
-        party,
-        postchannel,
-        postdate,
-        postmessage,
-        postengagement,
-        postreaction,
-        postcomment,
-        postshare,
-        posturl, }) => (
-        <a key={`${party}-${topic}`}
-          className='min-w-[260px] bg-white rounded-[5px] p-[15px] h-auto'
-          href={posturl} target="_blank" rel='noreferrer'>
-          <div className='flex flex-row justify-between'>
-            <div className='flex flex-row items-center'>
-              <div>{getLogo(party)}</div>
-              <div className='-ml-[5px]'>{getPostChanelLogo(postchannel)}</div>
-            </div>
-            <div className='wv-font-anuphan 
+    <div className='relative overflow-hidden'>
+      <div className='flex flex-row flex-nowrap gap-x-[10px] overflow-x-scroll items-baseline pr-[10px] scrollbar-hide'
+        onScroll={(e: BaseSyntheticEvent) => setShowArrow(e.target.offsetWidth + e.target.scrollLeft < e.target.scrollWidth)}>
+        {postItem.map(({ topic,
+          party,
+          postchannel,
+          postdate,
+          postmessage,
+          postengagement,
+          postreaction,
+          postcomment,
+          postshare,
+          posturl, }) => (
+          <a key={`${party}-${topic}`}
+            className='min-w-[260px] bg-white rounded-[5px] p-[15px] h-auto'
+            href={posturl} target="_blank" rel='noreferrer'>
+            <div className='flex flex-row justify-between'>
+              <div className='flex flex-row items-center'>
+                <div>{getLogo(party)}</div>
+                <div className='-ml-[5px]'>{getPostChanelLogo(postchannel)}</div>
+              </div>
+              <div className='wv-font-anuphan 
              wv-b7 text-black opacity-60'>
-              {moment(postdate, "YYYY-MM-DD").locale('th').format('ll')}
-            </div>
-          </div >
-          <div className='wv-font-anuphan text-left break-words 
+                {moment(postdate, "YYYY-MM-DD").locale('th').format('ll')}
+              </div>
+            </div >
+            <div className='wv-font-anuphan text-left break-words 
              wv-b5 text-black opacity-60 overflow-scroll max-h-[210px]
              border-b-[1px] border-gray mt-[5px] pb-[10px]'>
-            {postmessage}
-          </div>
-          <div className=' mt-[5px]'>
-            <div className='flex items-start text-black gap-x-[5px]'>
-              <div className='wv-font-anuphan wv-font-bold wv-b6'>{postengagement}</div>
-              <div className='wv-font-anuphan wv-b6'>Engagement</div>
+              {postmessage}
             </div>
-            <div className='wv-font-anuphan wv-b7 text-black opacity-70 text-left'>
-              {`${postreaction} reactions + ${postcomment} comments + ${postshare} shares`}
+            <div className=' mt-[5px]'>
+              <div className='flex items-start text-black gap-x-[5px]'>
+                <div className='wv-font-anuphan wv-font-bold wv-b6'>{postengagement}</div>
+                <div className='wv-font-anuphan wv-b6'>Engagement</div>
+              </div>
+              <div className='wv-font-anuphan wv-b7 text-black opacity-70 text-left'>
+                {`${postreaction} reactions + ${postcomment} comments + ${postshare} shares`}
+              </div>
             </div>
-          </div>
-        </a >
-      ))}
+          </a >
+        ))}
+      </div>
+      <ScrollableArrow show={showArrow} />
     </div >
   )
 }

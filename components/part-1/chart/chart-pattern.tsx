@@ -14927,15 +14927,15 @@ const CHART_PATTERN_COLLECTION = [
 
 const ChartPattern = (props: Props) => {
   return (
-    <div className='px-[20px]'>
+    <div className='px-[10px] py-[30px]'>
       <div className='wv-font-anuphan wv-font-bold
             mt-[30px] mb-[5px]
             leading-[31.5px] text-mobile-bold-b2'>
         5 วันที่แต่ละพรรคขยันโพสต์ที่สุด
       </div>
       <div className='wv-font-anuphan
-            mb-[5px]
-            leading-[27px] text-mobile-regular-b4'>
+            mb-[5px] text-mobile-regular-b4
+            leading-[27px] '>
         สะท้อนตัวอย่างวาระที่พรรคสื่อสารมากบนโลกออนไลน์
       </div>
       <div className='flex flex-col wv-font-anuphan
@@ -14944,7 +14944,7 @@ const ChartPattern = (props: Props) => {
         <div className='text-green'>
           ความเข้มสีเขียว แสดงจำนวนโพสต์/วัน
         </div>
-        <div className='flex flex-row gap-x-[10px]'>
+        <div className='flex flex-col tablet:flex-row gap-x-[10px]'>
           <div className='flex flex-row justify-between items-center gap-x-[3px]'>
             <div className='w-[8px] h-[8px] bg-black border-[0.5px] border-gray' />
             <div>

@@ -21,16 +21,15 @@ const Intro = (props: Props) => {
             เก็บข้อมูลระหว่างวันที่ 1 พ.ค. 62 -31 ส.ค. 65
           </div>
         </div>
-
-        <IntroCollection />
       </WvContainer>
-      <div className='flex flex-col gap-y-[10px]
-        wv-font-anuphan text-mobile-regular-b4
+      <IntroCollection />
+      <div className='flex flex-col gap-y-[10px] px-[20px] py-[17px] mt-[25px]
+        wv-font-anuphan text-mobile-regular-b4 leading-[24px]
         tablet:w-[850px] mx-auto'>
-        <div className='text-center my-[17px]'>
+        <div className='text-center'>
           Social Media คือหนึ่งช่องทางสำคัญที่พรรคการเมืองใช้สื่อสารเรื่องราวต่าง ๆ ถึงประชาชนได้รวดเร็ว โดยพรรคการเมืองแต่ละพรรคมีช่องทางออนไลน์สำหรับการสื่อสารทางการเมืองที่ต่างกันออกไป
         </div>
-        <div>
+        <div className='text-center'>
           ขอชวนร่วมเดินทางผ่านช่องทางออนไลน์ 3 ทางหลักของบรรดาพรรคการเมือง เพื่อทำความรู้จักตัวตนของ 3 พรรคการเมืองฝ่ายรัฐบาล และ 3 พรรคการเมืองฝ่ายค้าน ที่มี ส.ส. ในสภามากที่สุด ซึ่งถูกแสดงผ่านโลกออนไลน์ผ่าน 3 ประเด็นหลักที่น่าสนใจ
         </div>
         <div className='text-mobile-regular-b6 text-center opacity-60'>

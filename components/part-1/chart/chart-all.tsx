@@ -6,7 +6,7 @@ type Props = {}
 
 const Legend = () => {
   return (
-    <div className='flex flex-row items-center text-center divide-x 
+    <div className='flex flex-row justify-center items-center text-center divide-x 
     wv-font-anuphan text-mobile-regular-b7 leading-[15px] opacity-60'>
       <div className='px-[8px]'>`62</div>
       <div className='px-[8px]'>`63</div>
@@ -50,9 +50,9 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
   }
 
   return (
-    <div className='flex flex-row justify-center
-    divide-x divide-dashed'>
-      <div className="pr-[20px]">
+    <div className='flex flex-row justify-center mx-auto
+    w-full'>
+      <div className="w-[128px] mr-auto">
         <div className="flex flex-row gap-x-[5px] opacity-60">
           <HeadDecorationLeft />
           <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 ">
@@ -61,30 +61,33 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
           <HeadDecorationRight />
         </div>
         {GOVERNMENT.map((data) => (
-          <div key={`gov-${data.name}`} className='text-mobile-bold-b7 mt-[34px]'>
+          <div key={`gov-${data.name}`} className=' mt-[34px]'>
             <div>
               <div className='flex gap-[5px] justify-start'>
                 {data.logo}
-                <div className='wv-font-anuphan wv-font-bold'>
+                <div className='wv-font-anuphan text-mobile-bold-b7 wv-font-bold'>
                   {data.name}
                 </div>
               </div>
             </div>
             <div>
               <div className='flex gap-[5px] justify-start'>
-                <div>{getAvg(data)}</div>
-                <div className='wv-font-anuphan
+                <div className='wv-font-anuphan text-mobile-regular-b7 leading-[15px]
+             opacity-60'>เฉลี่ย</div>
+                <div className='wv-font-anuphan text-mobile-bold-b7 leading-[15px]'>{getAvg(data)}</div>
+                <div className='wv-font-anuphan text-mobile-regular-b7 leading-[15px]
              opacity-60'>โพสต์/วัน</div>
               </div>
             </div>
-            <div className='w-[128px] h-[62px]'>
+            <div className='w-full h-[62px]'>
               {getChart(data)}
             </div>
             <Legend />
           </div>
         ))}
       </div>
-      <div className="pl-[20px]">
+      <div className='border-[.5px] border-white border-dashed' />
+      <div className="w-[128px] ml-auto">
         <div className="flex flex-row gap-x-[5px] opacity-60">
           <HeadDecorationLeft />
           <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 ">
@@ -93,25 +96,25 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
           <HeadDecorationRight />
         </div>
         {OPPOSITION.map((data) => (
-          <div key={`opp-${data.name}`} className='text-mobile-bold-b7 mt-[34px]'>
+          <div key={`opp-${data.name}`} className=' mt-[34px]'>
             <div>
               <div className='flex gap-[5px] justify-start'>
                 {data.logo}
-                <div className='wv-font-anuphan wv-font-bold'>
+                <div className='wv-font-anuphan text-mobile-bold-b7 wv-font-bold'>
                   {data.name}
                 </div>
               </div>
             </div>
             <div>
               <div className='flex gap-[5px] justify-start'>
-                <div className='wv-font-anuphan
+                <div className='wv-font-anuphan text-mobile-regular-b7 leading-[15px]
              opacity-60'>เฉลี่ย</div>
-                <div>{getAvg(data)}</div>
-                <div className='wv-font-anuphan
+                <div className='wv-font-anuphan text-mobile-bold-b7 leading-[15px]'>{getAvg(data)}</div>
+                <div className='wv-font-anuphan text-mobile-regular-b7 leading-[15px]
              opacity-60'>โพสต์/วัน</div>
               </div>
             </div>
-            <div className='w-[128px] h-[62px]'>
+            <div className='w-full h-[62px]'>
               {getChart(data)}
             </div>
             <Legend />

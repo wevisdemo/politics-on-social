@@ -41,7 +41,7 @@ export type INTRO_PARTY_DATA_TYPE = typeof INTRO_PARTY_DATA[number]
 
 const IntroCollection = () => {
   return (
-    <div className='flex flex-row flex-wrap gap-[10px]'>
+    <div className='flex flex-row justify-center flex-wrap gap-[10px]'>
       {INTRO_PARTY_DATA.map((data, index) => (
         <IntroItem key={data.party} {...data} videoIndex={index + 1} />
       ))}

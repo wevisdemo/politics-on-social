@@ -328,6 +328,7 @@ const COMPETITOR_COMMUNICATION_POST = [
 import React, { useState, useEffect } from 'react'
 import moment from 'moment'
 import 'moment/locale/th'
+import ScrollableArrow from '../../../utils/scrollable-arrow'
 
 
 type Props = {}
@@ -371,54 +372,59 @@ const CompetitorPostCollection = ({ party }: {
         break;
     }
   }
+  const [showArrow, setShowArrow] = useState(true)
 
   return (
-    <div className='flex flex-row flex-nowrap gap-x-[10px] overflow-x-scroll items-baseline'>
-      {postItem.map(({ party,
-        partymentioned,
-        postchannel,
-        postdate,
-        postmessage,
-        postengagement,
-        postreaction,
-        postcomment,
-        postshare,
-        posturl }) => (
-        <div key={`${party}-${partymentioned}`}
-          className='w-[260px] flex-none'>
-          <div className='wv-font-anuphan text-mobile-regular-b6 text-white mb-[5px] text-left'>
-            {`พูดถึง${partymentioned}`}
-          </div>
-          <a className='w-full bg-white rounded-[5px] h-fit block  p-[15px] '
-            href={posturl} target="_blank" rel='noreferrer'>
-            <div className='flex flex-row justify-between'>
-              <div className='flex flex-row items-center'>
-                <div>{getLogo(party)}</div>
-                <div className='-ml-[5px]'>{getPostChanelLogo(postchannel)}</div>
-              </div>
-              <div className='wv-font-anuphan 
-             text-mobile-regular-b7 text-black opacity-60'>
-                {moment(postdate, "YYYY-MM-DD").locale('th').format('ll')}
-              </div>
+    <div className='relative overflow-hidden'>
+      <div className='flex flex-row flex-nowrap gap-x-[10px] overflow-x-scroll items-baseline pr-[10px] scrollbar-hide'
+        onScroll={(e: BaseSyntheticEvent) => setShowArrow(e.target.offsetWidth + e.target.scrollLeft < e.target.scrollWidth)}>
+        {postItem.map(({ party,
+          partymentioned,
+          postchannel,
+          postdate,
+          postmessage,
+          postengagement,
+          postreaction,
+          postcomment,
+          postshare,
+          posturl }) => (
+          <div key={`${party}-${partymentioned}`}
+            className='w-[260px] flex-none'>
+            <div className='wv-font-anuphan text-mobile-regular-b6 text-white mb-[5px] text-left'>
+              {`พูดถึง${partymentioned}`}
             </div>
-            <div className='wv-font-anuphan text-left break-words 
+            <a className='w-full bg-white rounded-[5px] h-fit block  p-[15px] '
+              href={posturl} target="_blank" rel='noreferrer'>
+              <div className='flex flex-row justify-between'>
+                <div className='flex flex-row items-center'>
+                  <div>{getLogo(party)}</div>
+                  <div className='-ml-[5px]'>{getPostChanelLogo(postchannel)}</div>
+                </div>
+                <div className='wv-font-anuphan 
+             text-mobile-regular-b7 text-black opacity-60'>
+                  {moment(postdate, "YYYY-MM-DD").locale('th').format('ll')}
+                </div>
+              </div>
+              <div className='wv-font-anuphan text-left break-words 
              text-mobile-regular-b5 text-black opacity-60 overflow-scroll max-h-[210px]
              border-b-[1px] border-gray mt-[5px] pb-[10px]'>
-              {postmessage}
-            </div>
-            <div className=' mt-[5px]'>
-              <div className='flex items-start text-black gap-x-[5px]'>
-                <div className='wv-font-anuphan wv-font-bold wv-b6'>{postengagement}</div>
-                <div className='wv-font-anuphan text-mobile-regular-b6'>Engagement</div>
+                {postmessage}
               </div>
-              <div className='wv-font-anuphan text-mobile-regular-b7 text-black opacity-70 text-left'>
-                {`${postreaction} reactions + ${postcomment} comments + ${postshare} shares`}
+              <div className=' mt-[5px]'>
+                <div className='flex items-start text-black gap-x-[5px]'>
+                  <div className='wv-font-anuphan wv-font-bold wv-b6'>{postengagement}</div>
+                  <div className='wv-font-anuphan text-mobile-regular-b6'>Engagement</div>
+                </div>
+                <div className='wv-font-anuphan text-mobile-regular-b7 text-black opacity-70 text-left'>
+                  {`${postreaction} reactions + ${postcomment} comments + ${postshare} shares`}
+                </div>
               </div>
-            </div>
-          </a>
-        </div >
-      ))}
-    </div >
+            </a>
+          </div >
+        ))}
+      </div >
+      <ScrollableArrow show={showArrow} />
+    </div>
   )
 }
 

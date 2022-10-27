@@ -1,5 +1,6 @@
-import { totalmem } from "os"
+import React, { useState } from 'react'
 import { HeadDecorationLeft, HeadDecorationRight } from "../utils"
+import ScrollableArrow from '../utils/scrollable-arrow'
 
 type Props = {}
 
@@ -65,13 +66,16 @@ const renderChart = (title: string) => {
         break;
     }
   }
+  const [showArrow, setShowArrow] = useState(true)
+
   return (
-    <div className="mt-[56px]">
+    <div className="relative mt-[56px] ml-[20px]">
       <div className='wv-font-kondolar wv-font-bold
             text-green leading-[45px] text-mobile-bold-h5'>
         {getTitle(title)}
       </div>
-      <div className="flex flex-row justify-center divide-x overflow-x-scroll">
+      <div className="flex flex-row tablet:justify-center divide-x overflow-x-scroll scrollbar-hide pr-[20px]"
+        onScroll={(e: BaseSyntheticEvent) => setShowArrow(e.target.offsetWidth + e.target.scrollLeft < e.target.scrollWidth)}>
         <div className="pr-[20px]">
           <div className="flex flex-row gap-x-[5px] opacity-60">
             <HeadDecorationLeft />
@@ -113,6 +117,7 @@ const renderChart = (title: string) => {
           </div>
         </div>
       </div>
+      <ScrollableArrow show={showArrow} />
     </div>
   )
 }
@@ -123,18 +128,20 @@ const Part3 = (props: Props) => {
   return (
     <div id="part-3">
       <div className='text-center my-[26px]'>
-        <div className='wv-font-anuphan wv-font-bold
+        <div className=" px-[20px]">
+          <div className='wv-font-anuphan wv-font-bold
             w-[25px] h-[25px] rounded-full bg-green mb-[10px]
             mx-auto
             text-mobile-bold-b4 leading-[24px] text-black'>
-          3
-        </div>
-        <div className='wv-font-kondolar wv-font-bold
+            3
+          </div>
+          <div className='wv-font-kondolar wv-font-bold
             text-green leading-[45px] text-mobile-bold-h3'>
-          กระแสตอบรับที่พรรคได้รับ
-        </div>
-        <div className="wv-font-kondolar wv-font-bold text-mobile-bold-h5 leading-[39.2px] mt-[62px] mb-[28px]">
-          มาดูกันว่าสิ่งที่พรรคให้ความสำคัญนั้น สอดคล้องกับความสนใจของชาวโซเชียลหรือไม่
+            กระแสตอบรับที่พรรคได้รับ
+          </div>
+          <div className="wv-font-kondolar wv-font-bold text-mobile-bold-h5 leading-[39.2px] mt-[62px] mb-[28px]">
+            มาดูกันว่าสิ่งที่พรรคให้ความสำคัญนั้น สอดคล้องกับความสนใจของชาวโซเชียลหรือไม่
+          </div>
         </div>
         <div className="w-[300px] py-[15px] px-[13.5px] bg-black-2 mx-auto">
           <div className="wv-font-anuphan wv-font-bold text-mobile-bold-b6 mb-[10px] text-center mx-auto">วิธีอ่าน</div>

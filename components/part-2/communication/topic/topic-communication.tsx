@@ -54,11 +54,11 @@ const TopicCommunication = (props: Props) => {
         text-mobile-bold-b5 text-black bg-green leading-[21px] rounded-[100px] w-fit mx-auto px-[10px]'>
           ด้านเนื้อหา
         </div>
-        <div className='wv-font-kondolar wv-font-bold text-mobile-bold-h5
+        <div className='wv-font-kondolar wv-font-bold text-mobile-bold-h5 leading-[39.2px]
       text-center mx-auto my-[10px]'>
           ประเด็นที่เป็นกระแสสังคมถูกพูดถึงในสัดส่วนมากน้อยแค่ไหน
         </div>
-        <div className='wv-font-anuphan text-mobile-regular-b4 text-center mx-auto
+        <div className='wv-font-anuphan text-mobile-regular-b4 text-center mx-auto leading-[24px]
           tablet:max-w-[839px]'>
           สัดส่วนโพสต์ที่สื่อสารแต่ละประเด็น สะท้อนว่าพรรคให้ความสำคัญกับเรื่องอะไร ซึ่งจาก 6 ประเด็นที่ Wevis คัดเลือกมา<br />ตามหัวข้อที่เคยเห็นว่าถูกพูดถึงในโลกออนไลน์และออฟไลน์ค่อนข้างมาก พบว่า<br /><span className='wv-font-bold'><span className='text-topic-covid'>โควิด</span>และ<span className='text-topic-economic'>เศรษฐกิจ</span>เป็นประเด็นหลักที่ทุกพรรคนำเสนอ</span> ส่วนประเด็นรองนั้นแตกต่างกันไป เช่น<br /> พรรคภูมิใจไทยกับเรื่อง<span className='text-topic-weed'>กัญชา</span> หรือพรรคเพื่อไทยกับเรื่อง<span className='text-topic-movement'>การชุมนุม</span><br />ขณะที่พรรคก้าวไกลสื่อสารเกือบทุกประเด็นในสัดส่วนที่ไม่ต่างกันมาก<br />น่าสนใจว่า<span className='text-topic-lgbt'>ความเท่าเทียมทางเพศ</span>เป็นประเด็นที่ไม่ถูกพูดถึงเลยจากพรรคภูมิใจไทย และเสรีรวมไทย
         </div>
@@ -130,7 +130,7 @@ const TopicCommunication = (props: Props) => {
               </svg>
             </button>
           </div>
-          <div className={`absolute right-0 left-0 z-10 w-full h-auto mt-3  bg-black
+          <div className={`absolute right-0 left-0 z-20 w-full h-auto mt-3  text-black bg-white
           flex flex-col justify-start
           ${openDropdown ? 'show' : 'hidden'}`} >
             {DROPDOWN_COLLECTION.map((data, index) => (
@@ -144,7 +144,9 @@ const TopicCommunication = (props: Props) => {
         </div>
         <div className='wv-font-anuphan wv-font-bold leading-[21px] text-mobile-bold-b5'>ที่ได้รับความสนใจสูงของแต่ละพรรค</div>
       </div>
-      <TopicPostCollection topic={DROPDOWN_COLLECTION[selectedItem].topic} />
+      <div className='ml-[10px]'>
+        <TopicPostCollection topic={DROPDOWN_COLLECTION[selectedItem].topic} />
+      </div>
     </div>
   )
 }
