@@ -1001,8 +1001,8 @@ const CoverChart = ({ minDate, maxDate, maxDayCount, counter, handleClick }: Pro
             style={{ left: `${xScale(counter)}px` }} />
         </div>
         <div className='flex flex-row justify-between
-          wv-font-anuphan text-mobile-regular-b7 mt-[6px] opacity-60
-          tablet:text-desktop-regular-b7'>
+          wv-font-anuphan wv-b7 mt-[6px] opacity-60
+          wv-b7'>
           <div>{minDate.locale('th').format('ll')}</div>
           <div>{maxDate.locale('th').format('ll')}</div>
         </div>

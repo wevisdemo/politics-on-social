@@ -12,15 +12,15 @@ const Part2 = (props: Props) => {
       <div className='text-center my-[26px]'>
         <div className='wv-font-anuphan wv-font-bold
             w-[25px] h-[25px] rounded-full bg-green mb-[10px]
-            mx-auto
-            text-mobile-bold-b4 leading-[24px] text-black
-            tablet:text-desktop-bold-b4 tablet:leading-[30px]
+            !mx-auto
+            wv-b4 leading-[24px] text-black
+            wv-b4 tablet:leading-[30px]
             tablet:w-[30px] tablet:h-[30px]'>
           2
         </div>
         <div className='wv-font-kondolar wv-font-bold
-            text-green leading-[45px] text-mobile-bold-h3
-            tablet:text-desktop-bold-h3 tablet:leading-[75px]'>
+            text-green leading-[45px] wv-h3
+            wv-h3 tablet:leading-[75px]'>
           พรรคขยันสื่อสาร<br className='tablet:hidden' />เรื่องอะไร
         </div>
         <VisualCommunication />

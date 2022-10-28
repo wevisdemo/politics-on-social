@@ -527,7 +527,7 @@ const Info = ({ members }: {
       <div className='relative' >
         {members.map((member, index) =>
           <div key={`info-${member.name}`} className={`absolute rounded-full 
-          z-20 transition-all
+          z-20 transition-all cursor-pointer
           ${index === selectIndex ? 'opacity-100' : 'opacity-0'}
           ${member.pos} border-green border-[2px]
           `}
@@ -573,32 +573,36 @@ const Info = ({ members }: {
 const PersonCommunication = (props: Props) => {
   return (
     <div className='py-[40px]'>
-      <div className=' px-[20px]'>
+      <div className=' px-[20px] flex flex-col gap-[10px]'>
         <div className='wv-font-anuphan wv-font-bold 
-        text-mobile-bold-b5 text-black bg-green leading-[21px] rounded-[100px] w-fit mx-auto px-[10px]'>
+        wv-b5 text-black bg-green leading-[21px] rounded-[100px] w-fit !mx-auto px-[10px]
+        wv-b5 tablet:leading-[24px]'>
           ด้านบุคคล
         </div>
-        <div className='wv-font-kondolar wv-font-bold text-mobile-bold-h5
-      text-center mx-auto my-[10px] leading-[39.2px]'>
+        <div className='wv-font-kondolar wv-font-bold wv-h5
+      text-center !mx-auto my-[10px] leading-[39.2px]
+      wv-h5 tablet:leading-[54px]'>
           สมาชิกได้พื้นที่สื่อในพรรคมากน้อยเพียงใด
         </div>
-        <div className='wv-font-anuphan text-mobile-regular-b4 text-center leading-[24px]'>
+        <div className='wv-font-anuphan wv-b4 text-center leading-[24px]
+        wv-b4 tablet:leading-[27px]'>
           เมื่อพิจารณารายชื่อ 5 สมาชิกคนสำคัญที่ได้พื้นที่ในการสื่อสารจากพรรคมากที่สุด พบว่า <br />
           <div className='wv-font-bold'>ทุกพรรคให้พื้นที่หัวหน้าพรรคมากเป็นอันดับแรก แต่ให้ในสัดส่วนที่ต่างกัน</div>
         </div>
-        <div className='wv-font-anuphan text-mobile-regular-b4 text-center leading-[24px] mt-[10px]'>
+        <div className='wv-font-anuphan wv-b4 text-center leading-[24px] mt-[10px]
+        wv-b4 tablet:leading-[27px]'>
           พรรคเสรีรวมไทย พรรคภูมิใจไทย และพรรคประชาธิปัตย์ หัวหน้าพรรคผูกขาดพื้นที่สื่อของพรรคอย่างเห็นได้ชัด<br /> ขณะที่พรรคพลังประชารัฐ พรรคเพื่อไทย และพรรคก้าวไกล พื้นที่สื่อถูกระจายไปให้สมาชิกคนอื่นๆ<br /> ในสัดส่วนที่ไม่ต่างกันมาก
         </div>
       </div>
       <div className='wv-font-anuphan leading-[15px]
-         my-[10px] mb-[60px] w-[280px] mx-auto text-desktop-regular-b7 text-center opacity-50
-         tablet:w-auto'>
+         !my-[10px] !mb-[60px] w-[280px] !mx-auto text-desktop-regular-b7 text-center opacity-50
+         tablet:w-[500px] desktop:w-auto wv-b7 tablet:leading-[18px]'>
         <span className='wv-font-bold'>คำนวณ %</span> จากจำนวนโพสต์ที่ในแคปชันมี<br className='tablet:hidden' /><span className='underline text-green'>ชื่อ-นามสกุลสมาชิกพรรคตำแหน่งสำคัญ</span> <span className='wv-font-bold'>ต่อจำนวนโพสต์ทั้งหมดของแต่ละพรรค</span> โดย 1 โพสต์สามารถมีได้มากกว่า 1 ชื่อ
       </div>
-      <div className='flex flex-col items-center tablet:flex-row my-[30px] 
+      <div className='flex flex-col items-center tablet:flex-row !my-[30px] 
         wv-font-anuphan text-desktop-regular-b6
-        w-[200px] mx-auto
-        tablet:w-[305px]'>
+        w-[200px] !mx-auto
+        tablet:w-[305px] wv-b6 tablet:leading-[21px]'>
         <svg className='flex-none w-[31px] h-[31px]' viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_357_96990)">
             <rect x="1.8103" width={23} height={23} rx="11.5" fill="#C5C5C5" />
@@ -615,49 +619,59 @@ const PersonCommunication = (props: Props) => {
         </svg>
         <div>คลิกที่รูป เพื่อดูตัวอย่างโพสต์ที่ได้รับความสนใจสูง</div>
       </div>
-      <div className='flex flex-col justify-center items-center w-[250px] mx-auto
-    tablet:divide-x  tablet:flex-row tablet:w-[560px]'>
-        <div className="tablet:pr-[20px]">
+      <div className='flex flex-col justify-center items-center w-[250px] !mx-auto
+    tablet:divide-x  tablet:flex-row tablet:w-[560px] desktop:w-auto'>
+        <div className="tablet:pr-[20px] desktop:pr-[48px]">
           <div className="flex flex-row gap-x-[5px] opacity-60">
             <HeadDecorationLeft />
-            <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 ">
+            <div className="flex-none wv-font-anuphan wv-font-bold wv-b6 
+            wv-b6 tablet:leading-[21px]">
               ฝ่ายรัฐบาล
             </div>
             <HeadDecorationRight />
           </div>
-          {GOVERNMENT.map((data) => (
-            <div key={`opp-topic-${data.party}`} className='text-desktop-bold-b7 mt-[34px]'>
-              <div className='wv-font-anuphan wv-font-bold mb-[5px]'>
-                {data.party}
-              </div>
-              <div className='w-[250px] h-[250px] relative'>
-                <div className='absolute top-0 left-0'>
-                  {data.content}
+          <div className='flex flex-col justify-center desktop:flex-row desktop:flex-wrap desktop:max-w-[522px] gap-x-[10px]'>
+            {GOVERNMENT.map((data) => (
+              <div key={`opp-topic-${data.party}`}
+                className='text-desktop-bold-b7 !mt-[34px]
+              wv-b7 tablet:leading-[18px]'>
+                <div className='wv-font-anuphan wv-font-bold mb-[5px]'>
+                  {data.party}
                 </div>
-                <Info members={data.members} />
+                <div className='w-[250px] h-[250px] relative'>
+                  <div className='absolute top-0 left-0'>
+                    {data.content}
+                  </div>
+                  <Info members={data.members} />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <div className="mt-[20px] tablet:mt-0 tablet:pl-[20px]">
+        <div className="mt-[20px] tablet:mt-0 tablet:pl-[20px] desktop:pl-[48px]">
           <div className="flex flex-row gap-x-[5px] opacity-60">
             <HeadDecorationLeft />
-            <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 ">
+            <div className="flex-none wv-font-anuphan wv-font-bold wv-b6 
+            wv-b6 tablet:leading-[21px]">
               ฝ่ายค้าน
             </div>
             <HeadDecorationRight />
           </div>
-          {OPPOSITION.map((data) => (
-            <div key={`opp-topic-${data.party}`} className='text-desktop-bold-b7 mt-[34px]'>
-              <div className='wv-font-anuphan wv-font-bold mb-[5px]'>
-                {data.party}
+          <div className='flex flex-col justify-center desktop:flex-row desktop:flex-wrap desktop:max-w-[522px] gap-x-[10px]'>
+            {OPPOSITION.map((data) => (
+              <div key={`opp-topic-${data.party}`}
+                className='text-desktop-bold-b7 !mt-[34px]
+              wv-b7 tablet:leading-[18px]'>
+                <div className='wv-font-anuphan wv-font-bold mb-[5px]'>
+                  {data.party}
+                </div>
+                <div className='w-[250px] h-[250px] relative'>
+                  {data.content}
+                  <Info members={data.members} />
+                </div>
               </div>
-              <div className='w-[250px] h-[250px] relative'>
-                {data.content}
-                <Info members={data.members} />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

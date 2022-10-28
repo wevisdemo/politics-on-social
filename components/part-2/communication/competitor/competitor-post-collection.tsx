@@ -325,7 +325,7 @@ const COMPETITOR_COMMUNICATION_POST = [
   }
 ]
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import moment from 'moment'
 import 'moment/locale/th'
 import ScrollableArrow from '../../../utils/scrollable-arrow'
@@ -373,11 +373,22 @@ const CompetitorPostCollection = ({ party }: {
     }
   }
   const [showArrow, setShowArrow] = useState(true)
-
+  const horizontalScrollRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (horizontalScrollRef.current) {
+      setShowArrow(horizontalScrollRef.current.scrollWidth > horizontalScrollRef.current.clientWidth)
+    }
+  }, [horizontalScrollRef])
   return (
-    <div className='relative overflow-hidden'>
-      <div className='flex flex-row flex-nowrap gap-x-[10px] overflow-x-scroll items-baseline pr-[10px] scrollbar-hide'
-        onScroll={(e: BaseSyntheticEvent) => setShowArrow(e.target.offsetWidth + e.target.scrollLeft < e.target.scrollWidth)}>
+    <div className='relative overflow-hidden desktop:ml-[50px]'>
+      <div className='flex flex-row flex-nowrap gap-x-[10px] overflow-x-scroll items-baseline pr-[10px] scrollbar-hide
+       desktop:pr-[50px]'
+        ref={horizontalScrollRef}
+        onScroll={(e: React.UIEvent<HTMLDivElement>) => {
+          const target: EventTarget = e.target;
+          const targetDiv: HTMLDivElement = target as HTMLDivElement
+          setShowArrow(targetDiv.offsetWidth + targetDiv.scrollLeft < targetDiv.scrollWidth)
+        }}>
         {postItem.map(({ party,
           partymentioned,
           postchannel,
@@ -390,7 +401,7 @@ const CompetitorPostCollection = ({ party }: {
           posturl }) => (
           <div key={`${party}-${partymentioned}`}
             className='w-[260px] flex-none'>
-            <div className='wv-font-anuphan text-mobile-regular-b6 text-white mb-[5px] text-left'>
+            <div className='wv-font-anuphan wv-b6 text-white !mb-[5px] text-left'>
               {`พูดถึง${partymentioned}`}
             </div>
             <a className='w-full bg-white rounded-[5px] h-fit block  p-[15px] '
@@ -401,21 +412,21 @@ const CompetitorPostCollection = ({ party }: {
                   <div className='-ml-[5px]'>{getPostChanelLogo(postchannel)}</div>
                 </div>
                 <div className='wv-font-anuphan 
-             text-mobile-regular-b7 text-black opacity-60'>
+             wv-b7 text-black opacity-60'>
                   {moment(postdate, "YYYY-MM-DD").locale('th').format('ll')}
                 </div>
               </div>
               <div className='wv-font-anuphan text-left break-words 
-             text-mobile-regular-b5 text-black opacity-60 overflow-scroll max-h-[210px]
+             wv-b5 text-black opacity-60 overflow-scroll max-h-[210px]
              border-b-[1px] border-gray mt-[5px] pb-[10px]'>
                 {postmessage}
               </div>
               <div className=' mt-[5px]'>
                 <div className='flex items-start text-black gap-x-[5px]'>
                   <div className='wv-font-anuphan wv-font-bold wv-b6'>{postengagement}</div>
-                  <div className='wv-font-anuphan text-mobile-regular-b6'>Engagement</div>
+                  <div className='wv-font-anuphan wv-b6'>Engagement</div>
                 </div>
-                <div className='wv-font-anuphan text-mobile-regular-b7 text-black opacity-70 text-left'>
+                <div className='wv-font-anuphan wv-b7 text-black opacity-70 text-left'>
                   {`${postreaction} reactions + ${postcomment} comments + ${postshare} shares`}
                 </div>
               </div>

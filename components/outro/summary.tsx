@@ -10,7 +10,7 @@ const Summary = (props: Props) => {
   return (
     <div className='px-[20px]'>
       <div className='mt-[46.52px] mb-[30px]'>
-        <div className='wv-font-anuphan text-mobile-regular-b4 text-center'>
+        <div className='wv-font-anuphan wv-b4 text-center'>
           การสื่อสารทางการเมืองผ่านช่องทางออนไลน์ของพรรคการเมือง แสดงให้เห็นได้ว่า<br />แต่ละพรรคต้องการสร้างตัวตนแบบใดให้สังคมออนไลน์ได้เห็น<br />รวมถึงต้องการสื่อสารในเรื่องใดให้ประชาชนในโลกออนไลน์ได้รับรู้และจดจำ<br />ซึ่งเชื่อมโยงกับตัวตนและการสื่อสารในโลกแห่งความเป็นจริงของพรรคการเมืองเช่นกัน
         </div>
         <div className='flex justify-center my-[35px]'>

@@ -57,8 +57,8 @@ const PostSummary = (props: Props) => {
       <div className='flex flex-col items-center justify-center
        tablet:flex-row tablet:gap-x-[7px]'>
         <div className='wv-font-anuphan wv-font-bold
-       text-mobile-bold-b4 leading-[24px] mb-[3px]
-       tablet:text-desktop-bold-b4 tablet:leading-[27px]'>
+       wv-b4 leading-[24px] mb-[3px]
+       wv-b4 tablet:leading-[27px]'>
           จำนวนโพสต์ในแต่ละวันจาก
         </div>
         <div >

@@ -21,29 +21,29 @@ const VisualCommunication = (props: Props) => {
   return (
     <div className='py-[40px]
       tablet:my-[35px]'>
-      <div className=' px-[20px]'>
+      <div className=' px-[20px] flex flex-col gap-[10px]'>
         <div className='wv-font-anuphan wv-font-bold 
-        text-mobile-bold-b5 text-black bg-green leading-[21px] rounded-[100px] w-fit mx-auto px-[10px]
-        tablet:text-desktop-bold-b5 tablet:leading-[24px]'>
+        wv-b5 text-black bg-green leading-[21px] rounded-[100px] w-fit !mx-auto px-[10px]
+        wv-b5 tablet:leading-[24px]'>
           ด้านภาพ
         </div>
-        <div className='wv-font-kondolar wv-font-bold text-mobile-bold-h5
+        <div className='wv-font-kondolar wv-font-bold wv-h5
       text-center mx-auto my-[10px]
-      tablet:text-desktop-bold-h5 tablet:leading-[54px]'>
+      wv-h5 tablet:leading-[54px]'>
           First Impression
         </div>
-        <div className='wv-font-anuphan text-mobile-regular-b4 text-center mx-auto
-        tablet:max-w-[850px] tablet:text-desktop-regular-b4 tablet:leading-[27px]'>
+        <div className='wv-font-anuphan wv-b4 text-center mx-auto
+        tablet:max-w-[850px] wv-b4 tablet:leading-[27px]'>
           ภาพปก (พิจารณาเฉพาะทาง Facebook เพราะเป็นช่องทางที่ทุกพรรคมี) เป็นสิ่งแรกที่ทุกคนต้องเห็นเมื่อเข้ามาดูเพจของแต่ละพรรคการเมือง สิ่งนี้อาจเปรียบเสมือนป้ายไวนิลที่ถูกแขวนไว้หน้าอาคารที่ทำการพรรค ซึ่งสะท้อนว่า ในแต่ละช่วงเวลา พรรคส่งข้อความอะไรออกมาบ้าง ผ่านภาพที่แสดงให้เห็นเหล่านี้
         </div>
 
         <div className='my-[27px] flex flex-col tablet:flex-row justify-center items-center gap-x-[10px]'>
-          <div className='wv-font-anuphan wv-font-bold leading-[21px] text-mobile-bold-b5
-          tablet:text-desktop-bold-b5 tablet:leading-[24px]'>ภาพปก Facebook</div>
+          <div className='wv-font-anuphan wv-font-bold leading-[21px] wv-b5
+          wv-b5 tablet:leading-[24px]'>ภาพปก Facebook</div>
           <div className="relative inline-block text-left border-[1px] border-white w-[200px] mx-auto p-[10px] my-[3px]
         tablet:mx-0
          wv-font-anuphan wv-font-bold text-desktop-bold-b6
-         tablet:text-desktop-bold-b6 tablet:leading-[21px]">
+         wv-b6 tablet:leading-[21px]">
             <div>
               <button type="button"
                 className="inline-flex w-full justify-between items-center"

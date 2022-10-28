@@ -8,8 +8,8 @@ const Legend = () => {
   return (
     <div>
       <div className='flex flex-row justify-center items-center text-center divide-x 
-    wv-font-anuphan text-mobile-regular-b7 leading-[15px] opacity-60
-    tablet:text-desktop-regular-b7 tablet:leading-[18px]
+    wv-font-anuphan wv-b7 leading-[15px] opacity-60
+    wv-b7 tablet:leading-[18px]
     tablet:hidden'>
         <div className='w-1/4'>`62</div>
         <div className='w-1/4'>`63</div>
@@ -17,8 +17,8 @@ const Legend = () => {
         <div className='w-1/4'>`65</div>
       </div>
       <div className=' flex-row justify-around items-center text-center divide-x 
-    wv-font-anuphan text-mobile-regular-b7 leading-[15px] opacity-60
-    tablet:text-desktop-regular-b7 tablet:leading-[18px]
+    wv-font-anuphan wv-b7 leading-[15px] opacity-60
+    wv-b7 tablet:leading-[18px]
     hidden tablet:flex'>
         <div className='w-1/4'>2562</div>
         <div className='w-1/4'>2563</div>
@@ -32,7 +32,7 @@ const Legend = () => {
 const NoAccount = () => {
   return (
     <div className='w-full h-full flex items-center'>
-      <div className='m-auto wv-font-anuphan text-mobile-regular-b7 opacity-60'>พรรคไม่มี account <br /> ในช่องทางนี้</div>
+      <div className='m-auto wv-font-anuphan wv-b7 opacity-60'>พรรคไม่มี account <br /> ในช่องทางนี้</div>
     </div>
   )
 }
@@ -69,8 +69,8 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
         tablet:w-auto tablet:max-w-[450px] tablet:mr-[32px]">
         <div className="flex flex-row gap-x-[5px] opacity-60">
           <HeadDecorationLeft />
-          <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 
-            tablet:text-desktop-bold-b6 tablet:leading-[21px]">
+          <div className="flex-none wv-font-anuphan wv-font-bold wv-b6 
+            wv-b6 tablet:leading-[21px]">
             ฝ่ายรัฐบาล
           </div>
           <HeadDecorationRight />
@@ -81,19 +81,19 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
               <div className='flex gap-[5px] justify-start'>
                 {data.logo}
                 <div className='wv-font-anuphan wv-font-bold
-                  text-mobile-regular-b7 leading-[15px]
-                  tablet:text-desktop-regular-b7 tablet:leading-[18px]'>
+                  wv-b7 leading-[15px]
+                  wv-b7 tablet:leading-[18px]'>
                   {data.name}
                 </div>
               </div>
               <div className='flex gap-[5px] justify-start'>
-                <div className='wv-font-anuphan text-mobile-regular-b7 leading-[15px]
-                tablet:text-desktop-regular-b7 tablet:leading-[18px]
+                <div className='wv-font-anuphan wv-b7 leading-[15px]
+                wv-b7 tablet:leading-[18px]
              opacity-60'>เฉลี่ย</div>
-                <div className='wv-font-anuphan text-mobile-bold-b7 leading-[15px]
-                tablet:text-desktop-bold-b7 tablet:leading-[18px]'>{getAvg(data)}</div>
-                <div className='wv-font-anuphan text-mobile-regular-b7 leading-[15px]
-                tablet:text-desktop-regular-b7 tablet:leading-[18px]
+                <div className='wv-font-anuphan wv-b7 leading-[15px]
+                wv-b7 tablet:leading-[18px]'>{getAvg(data)}</div>
+                <div className='wv-font-anuphan wv-b7 leading-[15px]
+                wv-b7 tablet:leading-[18px]
              opacity-60'>โพสต์/วัน</div>
               </div>
             </div>
@@ -109,8 +109,8 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
       tablet:w-auto tablet:max-w-[450px]  tablet:ml-[32px]">
         <div className="flex flex-row gap-x-[5px] opacity-60">
           <HeadDecorationLeft />
-          <div className="flex-none wv-font-anuphan wv-font-bold text-mobile-bold-b6 
-            tablet:text-desktop-bold-b6 tablet:leading-[21px]">
+          <div className="flex-none wv-font-anuphan wv-font-bold wv-b6 
+            wv-b6 tablet:leading-[21px]">
             ฝ่ายค้าน
           </div>
           <HeadDecorationRight />
@@ -121,19 +121,19 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
               <div className='flex gap-[5px] justify-start'>
                 {data.logo}
                 <div className='wv-font-anuphan wv-font-bold
-                  text-mobile-regular-b7 leading-[15px]
-                  tablet:text-desktop-regular-b7 tablet:leading-[18px]'>
+                  wv-b7 leading-[15px]
+                  wv-b7 tablet:leading-[18px]'>
                   {data.name}
                 </div>
               </div>
               <div className='flex gap-[5px] justify-start'>
-                <div className='wv-font-anuphan text-mobile-regular-b7 leading-[15px]
-                tablet:text-desktop-regular-b7 tablet:leading-[18px]
+                <div className='wv-font-anuphan wv-b7 leading-[15px]
+                wv-b7 tablet:leading-[18px]
              opacity-60'>เฉลี่ย</div>
-                <div className='wv-font-anuphan text-mobile-bold-b7 leading-[15px]
-                tablet:text-desktop-bold-b7 tablet:leading-[18px]'>{getAvg(data)}</div>
-                <div className='wv-font-anuphan text-mobile-regular-b7 leading-[15px]
-                tablet:text-desktop-regular-b7 tablet:leading-[18px]
+                <div className='wv-font-anuphan wv-b7 leading-[15px]
+                wv-b7 tablet:leading-[18px]'>{getAvg(data)}</div>
+                <div className='wv-font-anuphan wv-b7 leading-[15px]
+                wv-b7 tablet:leading-[18px]
              opacity-60'>โพสต์/วัน</div>
               </div>
             </div>
