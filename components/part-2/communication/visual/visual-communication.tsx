@@ -32,7 +32,7 @@ const VisualCommunication = (props: Props) => {
       wv-h5 tablet:leading-[54px]'>
           First Impression
         </div>
-        <div className='wv-font-anuphan wv-b4 text-center mx-auto
+        <div className='wv-font-anuphan wv-b4 text-center !mx-auto
         tablet:max-w-[850px] wv-b4 tablet:leading-[27px]'>
           ภาพปก (พิจารณาเฉพาะทาง Facebook เพราะเป็นช่องทางที่ทุกพรรคมี) เป็นสิ่งแรกที่ทุกคนต้องเห็นเมื่อเข้ามาดูเพจของแต่ละพรรคการเมือง สิ่งนี้อาจเปรียบเสมือนป้ายไวนิลที่ถูกแขวนไว้หน้าอาคารที่ทำการพรรค ซึ่งสะท้อนว่า ในแต่ละช่วงเวลา พรรคส่งข้อความอะไรออกมาบ้าง ผ่านภาพที่แสดงให้เห็นเหล่านี้
         </div>

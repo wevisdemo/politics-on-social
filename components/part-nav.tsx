@@ -21,13 +21,14 @@ const NAV_COLLECTION = [
 
 const PartNav = (props: Props) => {
   return (
-    <div className='px-[20px] flex flex-col divide-y 
+    <div className='px-[20px] flex flex-col divide-0
       tablet:max-w-[70%] mx-auto
       desktop:flex-row desktop:divide-x-[0.5px] desktop:divide-y-0'>
       {
         NAV_COLLECTION.map((data, index) => (
           <button key={`nav-${data.view}`}
-            className='w-full p-[10px] mb-[10px] desktop:w-1/3'
+            className='w-full p-[10px] mb-[10px] border-b-[1px] border-white desktop:border-b-0
+              desktop:w-1/3'
             onClick={() => scrollInToView(data.view)}>
             <div className='flex flex-row gap-x-[10px] w-full
               desktop:w-auto desktop:flex-col desktop:items-center desktop:justify-center desktop:gap-y-[10px]'>

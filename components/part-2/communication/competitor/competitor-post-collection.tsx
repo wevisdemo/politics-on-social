@@ -373,17 +373,10 @@ const CompetitorPostCollection = ({ party }: {
     }
   }
   const [showArrow, setShowArrow] = useState(true)
-  const horizontalScrollRef = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    if (horizontalScrollRef.current) {
-      setShowArrow(horizontalScrollRef.current.scrollWidth > horizontalScrollRef.current.clientWidth)
-    }
-  }, [horizontalScrollRef])
   return (
     <div className='relative overflow-hidden desktop:ml-[50px]'>
       <div className='flex flex-row flex-nowrap gap-x-[10px] overflow-x-scroll items-baseline pr-[10px] scrollbar-hide
        desktop:pr-[50px]'
-        ref={horizontalScrollRef}
         onScroll={(e: React.UIEvent<HTMLDivElement>) => {
           const target: EventTarget = e.target;
           const targetDiv: HTMLDivElement = target as HTMLDivElement

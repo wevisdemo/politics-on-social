@@ -60,7 +60,7 @@ const TopicCommunication = (props: Props) => {
           wv-h5 tablet:leading-[54px]'>
           ประเด็นที่เป็นกระแสสังคมถูกพูดถึงในสัดส่วนมากน้อยแค่ไหน
         </div>
-        <div className='wv-font-anuphan wv-b4 text-center mx-auto leading-[24px]
+        <div className='wv-font-anuphan wv-b4 text-center !mx-auto leading-[24px]
           tablet:max-w-[839px] wv-b4 tablet:leading-[27px]'>
           สัดส่วนโพสต์ที่สื่อสารแต่ละประเด็น สะท้อนว่าพรรคให้ความสำคัญกับเรื่องอะไร ซึ่งจาก 6 ประเด็นที่ Wevis คัดเลือกมา<br />ตามหัวข้อที่เคยเห็นว่าถูกพูดถึงในโลกออนไลน์และออฟไลน์ค่อนข้างมาก พบว่า<br /><span className='wv-font-bold'><span className='text-topic-covid'>โควิด</span>และ<span className='text-topic-economic'>เศรษฐกิจ</span>เป็นประเด็นหลักที่ทุกพรรคนำเสนอ</span> ส่วนประเด็นรองนั้นแตกต่างกันไป เช่น<br /> พรรคภูมิใจไทยกับเรื่อง<span className='text-topic-weed'>กัญชา</span> หรือพรรคเพื่อไทยกับเรื่อง<span className='text-topic-movement'>การชุมนุม</span><br />ขณะที่พรรคก้าวไกลสื่อสารเกือบทุกประเด็นในสัดส่วนที่ไม่ต่างกันมาก<br />น่าสนใจว่า<span className='text-topic-lgbt'>ความเท่าเทียมทางเพศ</span>เป็นประเด็นที่ไม่ถูกพูดถึงเลยจากพรรคภูมิใจไทย และเสรีรวมไทย
         </div>

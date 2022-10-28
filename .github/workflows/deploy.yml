@@ -30,6 +30,7 @@ jobs:
         run: |
           yarn run build
           yarn run export
+          yarn run replacer
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

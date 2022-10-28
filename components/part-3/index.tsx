@@ -70,7 +70,7 @@ const RenderChart: React.FC<{ title: string }> = ({ title }) => {
   const horizontalScrollRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (horizontalScrollRef.current) {
-      setShowArrow(horizontalScrollRef.current.scrollWidth > horizontalScrollRef.current.clientWidth)
+      setShowArrow((horizontalScrollRef.current.scrollWidth > horizontalScrollRef.current.clientWidth))
     }
   }, [horizontalScrollRef])
   return (
