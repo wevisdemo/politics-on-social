@@ -373,11 +373,26 @@ const CompetitorPostCollection = ({ party }: {
     }
   }
   const [showArrow, setShowArrow] = useState(true)
+  const scrollAreaRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (postItem.length && scrollAreaRef.current) {
+      const targetDiv: HTMLDivElement = scrollAreaRef.current as HTMLDivElement
+      if (targetDiv.offsetWidth + targetDiv.scrollLeft < targetDiv.scrollWidth) {
+        setShowArrow(true)
+        targetDiv.classList.remove("justify-center")
+      } else {
+        setShowArrow(false)
+        targetDiv.classList.add("justify-center")
+      }
+    }
+  }, [postItem, scrollAreaRef])
+
   return (
-    <div className='max-w-[1400px] mx-auto'>
-      <div className='relative overflow-hidden desktop:ml-[50px] max-w-[1200px] mx-auto'>
+    <div className=' mx-auto'>
+      <div className='relative overflow-hidden desktop:ml-[50px]'>
         <div className='flex flex-row flex-nowrap gap-x-[10px] overflow-x-scroll items-baseline pr-[10px] scrollbar-hide
-        desktop:pr-[50px]'
+        desktop:pr-[50px]
+        xxl-desktop:justify-center' ref={scrollAreaRef}
           onScroll={(e: React.UIEvent<HTMLDivElement>) => {
             const target: EventTarget = e.target;
             const targetDiv: HTMLDivElement = target as HTMLDivElement
