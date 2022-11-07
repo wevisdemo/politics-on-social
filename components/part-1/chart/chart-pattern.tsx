@@ -2527,7 +2527,7 @@ const CHART_PATTERN_COLLECTION = [
       </svg>
     ,
     keyEvent: [
-      { date: "1/3/2020", event: "ปีใหม่ ส.ส.", description: "แต่ละคนสวัสดีปีใหม่ และอวยพร", link: "https://www.youtube.com/watch?v=RK-hg4SNks0" },
+      { date: "1/3/2020", event: "ปีใหม่", description: "ส.ส. แต่ละคนสวัสดีปีใหม่ และอวยพร", link: "https://www.youtube.com/watch?v=RK-hg4SNks0" },
       { date: "11/6/2019", event: "ประชุมสภา", description: "โพสต์ผลงานของพรรค เรื่องโครงการบัตรสวัสดิการแห่งรัฐ และชิมช้อปใช้ และการอภิปรายของ ส.ส. ในสภา", link: "http://www.youtube.com/watch?v=di6FybUkGyo" },
       { date: "10/13/2020", event: "วันคล้ายวันสวรรคต ร.9", description: "ส.ส. ของพรรคที่ร่วมงานรำลึกวันคล้ายวันสวรรคต ร.9 ในพื้นที่จังหวัดต่าง ๆ", link: "https://www.facebook.com/493026767870664/posts/1003558743484128" },
       { date: "11/12/2020", event: "ประชุมสภา", description: "โพสต์เรื่องการอภิปรายของ ส.ส. ในสภา", link: "https://www.facebook.com/493026767870664/posts/1029240524249283" },

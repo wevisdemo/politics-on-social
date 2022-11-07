@@ -36,7 +36,6 @@ const VisualCommunication = (props: Props) => {
         tablet:max-w-[850px] wv-b4 tablet:leading-[27px]'>
           ภาพปก (พิจารณาเฉพาะทาง Facebook เพราะเป็นช่องทางที่ทุกพรรคมี) เป็นสิ่งแรกที่ทุกคนต้องเห็นเมื่อเข้ามาดูเพจของแต่ละพรรคการเมือง สิ่งนี้อาจเปรียบเสมือนป้ายไวนิลที่ถูกแขวนไว้หน้าอาคารที่ทำการพรรค ซึ่งสะท้อนว่า ในแต่ละช่วงเวลา พรรคส่งข้อความอะไรออกมาบ้าง ผ่านภาพที่แสดงให้เห็นเหล่านี้
         </div>
-
         <div className='my-[27px] flex flex-col tablet:flex-row justify-center items-center gap-x-[10px]'>
           <div className='wv-font-anuphan wv-font-bold leading-[21px] wv-b5
           wv-b5 tablet:leading-[24px]'>ภาพปก Facebook</div>
