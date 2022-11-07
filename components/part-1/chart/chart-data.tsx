@@ -12657,6 +12657,8 @@ export const OPPOSITION = [
     logo: <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/ก้าวไกล.png")] bg-contain bg-no-repeat bg-center' />,
     al: 11.31,
     fb: 2.77,
+    tw: 7.7,
+    yt: 0.84,
     all:
       <svg className='w-full h-full' viewBox="0 0 450 62" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width={450} height={62} fill="#161616" />
