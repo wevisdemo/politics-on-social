@@ -4,7 +4,7 @@ import { INTRO_PARTY_DATA_TYPE } from './intro-collection'
 const IntroItem = ({ party, facebook, twitter, youtube, videoIndex }: INTRO_PARTY_DATA_TYPE & { videoIndex: string | number }) => {
   return (
     <div>
-      <video autoPlay={true} loop={true} muted={true} src={`/design_assets/mp4/${videoIndex}.mp4`}
+      <video autoPlay={true} loop={true} muted={true} src={`/design_assets/mp4/${videoIndex}.mp4`} playsInline={true}
         className={`w-[92.8px] h-[187.16px] rounded-[5px]  mb-[10px]
         desktop:w-[198.33px] desktop:h-[400px] desktop:mb-[14px]`} />
       <div>
