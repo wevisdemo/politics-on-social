@@ -8,13 +8,15 @@ import WvNavbar from '@wevisdemo/ui/components/navbar';
 import WvNavButton from '@wevisdemo/ui/components/nav-button'
 import WvFooter from '@wevisdemo/ui/components/footer';
 import { useRouter } from 'next/router';
+import { Suspense } from 'react';
+import Spinner from '../components/utils/spinner';
 
-const Intro = dynamic(() => import('../components/intro'));
-const PartNav = dynamic(() => import('../components/part-nav'));
-const Part1 = dynamic(() => import('../components/part-1'));
-const Part2 = dynamic(() => import('../components/part-2'));
-const Part3 = dynamic(() => import('../components/part-3'));
-const Outro = dynamic(() => import('../components/outro'));
+const Intro = dynamic(() => import('../components/intro'), { loading: () => <Spinner /> });
+const PartNav = dynamic(() => import('../components/part-nav'), { loading: () => <Spinner /> });
+const Part1 = dynamic(() => import('../components/part-1'), { loading: () => <Spinner /> });
+const Part2 = dynamic(() => import('../components/part-2'), { loading: () => <Spinner /> });
+const Part3 = dynamic(() => import('../components/part-3'), { loading: () => <Spinner /> });
+const Outro = dynamic(() => import('../components/outro'), { loading: () => <Spinner /> });
 
 
 const Home: NextPage = () => {

@@ -1,9 +1,10 @@
 import dynamic from 'next/dynamic'
-import React from 'react'
-const MentionCommunication = dynamic(() => import('./communication/competitor/mention-communication'))
-const PersonCommunication = dynamic(() => import('./communication/member/person-communication'))
-const TopicCommunication = dynamic(() => import('./communication/topic/topic-communication'))
-const VisualCommunication = dynamic(() => import('./communication/visual/visual-communication'))
+import React, { Suspense } from 'react'
+import Spinner from '../utils/spinner'
+const MentionCommunication = dynamic(() => import('./communication/competitor/mention-communication'), { loading: () => <Spinner /> })
+const PersonCommunication = dynamic(() => import('./communication/member/person-communication'), { loading: () => <Spinner /> })
+const TopicCommunication = dynamic(() => import('./communication/topic/topic-communication'), { loading: () => <Spinner /> })
+const VisualCommunication = dynamic(() => import('./communication/visual/visual-communication'), { loading: () => <Spinner /> })
 
 type Props = {}
 

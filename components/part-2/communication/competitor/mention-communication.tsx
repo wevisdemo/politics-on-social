@@ -1,12 +1,13 @@
+import dynamic from 'next/dynamic'
 import React, { useState } from 'react'
-import ChartCompetitor from './chart-competitor'
+import Spinner from '../../../utils/spinner'
+const ChartCompetitor = dynamic(() => import('./chart-competitor'), { loading: () => <Spinner /> })
 
 
 
 type Props = {}
 
 const MentionCommunication = (props: Props) => {
-  const [selectParty, setSelectParty] = useState("พลังประชารัฐ")
   return (
     <div>
       <div className='py-[40px] flex flex-col gap-[10px] desktop:mb-[32px]'>

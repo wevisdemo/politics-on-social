@@ -329,7 +329,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import moment from 'moment'
 import 'moment/locale/th'
 import ScrollableArrow from '../../../utils/scrollable-arrow'
-import Image from 'next/image'
+
 import { getLogo } from '../../../utils'
 
 
