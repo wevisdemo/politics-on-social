@@ -1,14 +1,29 @@
+import Head from 'next/head';
 import WvButton from '@wevisdemo/ui/components/button';
 import WvButtonGroup from '@wevisdemo/ui/components/button-group';
 import WvContainer from '@wevisdemo/ui/components/container';
 import WvParagraphGroup from '@wevisdemo/ui/components/paragraph-group';
 import WvSharer from '@wevisdemo/ui/components/sharer';
 
+import WvNavbar from '@wevisdemo/ui/components/navbar';
+import WvNavButton from '@wevisdemo/ui/components/nav-button'
+import WvFooter from '@wevisdemo/ui/components/footer';
+import { useRouter } from 'next/router';
+
 type Props = {}
 
 const About = (props: Props) => {
+  const router = useRouter()
   return (
     <div className='bg-white'>
+      <Head>
+        <title>Wevis | Politics on Social</title>
+        <link rel="icon" href="/design_assets/sns/favicon.png" />
+      </Head>
+      <WvNavbar title="POLITICS ON SOCIAL">
+        <WvNavButton active={router?.asPath === '/'} onClick={() => router.replace('/')}>Home</WvNavButton>
+        <WvNavButton active={router?.asPath === '/about'} onClick={() => router.replace('/about')}>About</WvNavButton>
+      </WvNavbar>
       <WvContainer heading="เกี่ยวกับโครงการ">
         <WvParagraphGroup heading="เป้าหมาย">
           <p>
@@ -19,17 +34,17 @@ const About = (props: Props) => {
           </p>
         </WvParagraphGroup>
         <WvParagraphGroup heading="ที่มาของข้อมูล">
-          <ol>
+          <ol className='!list-decimal px-4'>
             <li>สำหรับข้อมูลการ Post และจำนวน Engagement ใน Official Account 3 ช่องทางหลัก ได้แก่ Facebook , Twitter และ YouTube ของ 6 พรรคการเมือง ซึ่งเก็บข้อมูลช่วงระหว่างวันที่ 1 พ.ค. 2562 ถึง 31 ส.ค. 2565 ทาง WeVis ขอขอบคุณบริษัท Wisesight สำหรับการสนับสนุนข้อมูลที่เป็นประโยชน์กับโปรเจกต์นี้อย่างละเอียด และครบถ้วนที่สุดเท่าที่จะเป็นไปได้</li>
             <li>สำหรับข้อมูลภาพปก (Cover Photo) จาก Facebook ของพรรคการเมือง เป็นการเก็บข้อมูลช่วงระหว่างวันที่ 1 พ.ค. 2562 ถึง 31 ส.ค. 2565 จาก Official Account ของ 6 พรรคการเมือง ได้แก่
-              <ul>
-                <li>Facebook พรรคพลังประชารัฐ</li>
-                <li>Facebook พรรคภูมิใจไทย</li>
-                <li>Facebook พรรคประชาธิปัตย์</li>
-                <li>Facebook พรรคเพื่อไทย</li>
-                <li>Facebook พรรคอนาคตใหม่</li>
-                <li>Facebook พรรคก้าวไกล</li>
-                <li>Facebook พรรคเสรีรวมไทย</li>
+              <ul className='px-4 !list-disc text-side-gov'>
+                <li><a href="https://www.facebook.com/PPRPThailand" target="_blank" rel="noreferrer">Facebook พรรคพลังประชารัฐ</a></li>
+                <li><a href="https://www.facebook.com/bhumjaithaiparty" target="_blank" rel="noreferrer">Facebook พรรคภูมิใจไทย</a></li>
+                <li><a href="https://www.facebook.com/DemocratPartyTH" target="_blank" rel="noreferrer">Facebook พรรคประชาธิปัตย์</a></li>
+                <li><a href="https://www.facebook.com/pheuthaiparty" target="_blank" rel="noreferrer">Facebook พรรคเพื่อไทย</a></li>
+                <li><a href="https://www.facebook.com/FWPthailand" target="_blank" rel="noreferrer">Facebook พรรคอนาคตใหม่</a></li>
+                <li><a href="https://www.facebook.com/MoveForwardPartyThailand" target="_blank" rel="noreferrer">Facebook พรรคก้าวไกล</a></li>
+                <li><a href="https://www.facebook.com/sereeruamthai" target="_blank" rel="noreferrer">Facebook พรรคเสรีรวมไทย</a></li>
               </ul>
             </li>
           </ol>
@@ -51,7 +66,7 @@ const About = (props: Props) => {
           </WvParagraphGroup>
           <WvParagraphGroup small="true" heading="สืบค้นและรวบรวมข้อมูล">
             <p>
-              สิทธิกานต์ ธีระวัฒนชัย, <a href='https://wisesight.com'>Wisesight</a>
+              สิทธิกานต์ ธีระวัฒนชัย, <a className='text-side-gov' href='https://wisesight.com' target="_blank" rel="noreferrer">Wisesight</a>
             </p>
           </WvParagraphGroup>
           <WvParagraphGroup small="true" heading="บรรณาธิการ">
@@ -65,58 +80,55 @@ const About = (props: Props) => {
             </p>
           </WvParagraphGroup>
           <WvParagraphGroup>
-            <p>โปรเจกต์ “ส่องเพจพรรค การเมืองถูกสื่อสารทางออนไลน์อย่างไร ?” ได้รับการสนับสนุนทุนในการดำเนินงานจาก <a href='https://www.ned.org'>National Endowment for Democracy (NED)</a> ซึ่งนำมาใช้เป็นต้นทุนในการรวมรวมข้อมูล ออกแบบ พัฒนาเว็บไซต์ ประสานงาน บริหารจัดการ ตลอดจนการจัด Meetup เพื่อดำเนินโครงการ</p>
+            <p>โปรเจกต์ “ส่องเพจพรรค การเมืองถูกสื่อสารทางออนไลน์อย่างไร ?” ได้รับการสนับสนุนทุนในการดำเนินงานจาก <a className='text-side-gov' href='https://www.ned.org' target="_blank" rel="noreferrer">National Endowment for Democracy (NED)</a> ซึ่งนำมาใช้เป็นต้นทุนในการรวมรวมข้อมูล ออกแบบ พัฒนาเว็บไซต์ ประสานงาน บริหารจัดการ ตลอดจนการจัด Meetup เพื่อดำเนินโครงการ</p>
           </WvParagraphGroup>
         </WvParagraphGroup>
-        <WvButtonGroup center="true">
-          <a href="https://drive.google.com/drive/folders/1Ytxy7exTpVKEvIsX0MJSBbfgTsKi-spW"
-            target="_blank" rel="noreferrer">
-            <WvButton color="blue"
+        <WvButtonGroup center="true" >
+          <WvButton color="blue" center="true"
+            onClick={() => window.open("https://drive.google.com/drive/folders/1Ytxy7exTpVKEvIsX0MJSBbfgTsKi-spW", "_blank")}
+          >
+            <svg
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              {/* https://drive.google.com/drive/folders/1Ytxy7exTpVKEvIsX0MJSBbfgTsKi-spW */}
-              <svg
-                width="21"
-                height="21"
-                viewBox="0 0 21 21"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_314_173)">
-                  <path
-                    d="M7.03582 2.86356H1.17529V19.4081H19.8247V2.86356C19.8247 2.86356 15.306 2.86356 13.9642 2.86356"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-miterlimit="10"
+              <g clip-path="url(#clip0_314_173)">
+                <path
+                  d="M7.03582 2.86356H1.17529V19.4081H19.8247V2.86356C19.8247 2.86356 15.306 2.86356 13.9642 2.86356"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M16.0317 8.65536L10.7284 13.9587L5.42513 8.65536"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                />
+                <line
+                  x1="10.667"
+                  y1="0.5"
+                  x2="10.667"
+                  y2="13"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_314_173">
+                  <rect
+                    width="20.8333"
+                    height="20"
+                    fill="white"
+                    transform="translate(0.0834961 0.5)"
                   />
-                  <path
-                    d="M16.0317 8.65536L10.7284 13.9587L5.42513 8.65536"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-miterlimit="10"
-                  />
-                  <line
-                    x1="10.667"
-                    y1="0.5"
-                    x2="10.667"
-                    y2="13"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_314_173">
-                    <rect
-                      width="20.8333"
-                      height="20"
-                      fill="white"
-                      transform="translate(0.0834961 0.5)"
-                    />
-                  </clipPath>
-                </defs>
-              </svg>
-              <div>ดาวน์โหลดข้อมูล</div>
-            </WvButton>
-          </a>
+                </clipPath>
+              </defs>
+            </svg>
+            <span>ดาวน์โหลดข้อมูล</span>
+          </WvButton>
           <WvButton>
             <img
               width="30"
@@ -128,6 +140,7 @@ const About = (props: Props) => {
         </WvButtonGroup>
         <WvSharer center="true" url="PROJECT_MAIN_PAGE" />
       </WvContainer >
+      <WvFooter dark={true} />
     </div >
   )
 }

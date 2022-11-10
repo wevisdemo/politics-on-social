@@ -4,6 +4,11 @@ import Head from 'next/head';
 
 import dynamic from 'next/dynamic';
 
+import WvNavbar from '@wevisdemo/ui/components/navbar';
+import WvNavButton from '@wevisdemo/ui/components/nav-button'
+import WvFooter from '@wevisdemo/ui/components/footer';
+import { useRouter } from 'next/router';
+
 const Intro = dynamic(() => import('../components/intro'));
 const PartNav = dynamic(() => import('../components/part-nav'));
 const Part1 = dynamic(() => import('../components/part-1'));
@@ -13,6 +18,7 @@ const Outro = dynamic(() => import('../components/outro'));
 
 
 const Home: NextPage = () => {
+  const router = useRouter()
   return (
     <div className='bg-black-1 text-white'>
       <Head>
@@ -30,12 +36,17 @@ const Home: NextPage = () => {
         <meta name="twitter:description" content="ร่วมรู้จักตัวตนของพรรคการเมืองผ่านช่องทางในโลกออนไลน์จากประเด็นน่าสนใจ" />
         <meta name="twitter:image" content={`${process.env.SECURE_HOST}/design_assets/sns/og.jpg`} />
       </Head>
+      <WvNavbar title="POLITICS ON SOCIAL" dark={true} >
+        <WvNavButton dark={true} active={router?.asPath === '/'} onClick={() => router.replace('/')}>Home</WvNavButton>
+        <WvNavButton dark={true} active={router?.asPath === '/about'} onClick={() => router.replace('/about')}>About</WvNavButton>
+      </WvNavbar>
       <Intro />
       <PartNav />
       <Part1 />
       <Part2 />
       <Part3 />
       <Outro />
+      <WvFooter />
     </div >
   )
 }
