@@ -1,16 +1,17 @@
+import Image from 'next/image';
 import React, { useState } from 'react'
 import CoverCollection from './cover-collection';
 
 type Props = {}
 
 const DROPDOWN_COLLECTION = [
-  { party: "เปรียบเทียบทุกพรรค", item: <div className='w-[15px] h-[15px] bg-[url("/design_assets/party_logo/เปรียบเทียบทุกพรรค.png")] bg-contain bg-center' /> },
-  { party: "พลังประชารัฐ", item: <div className='w-[15px] h-[15px] bg-[url("/design_assets/party_logo/พลังประชารัฐ.png")] bg-contain bg-center' /> },
-  { party: "ภูมิใจไทย", item: <div className='w-[15px] h-[15px] bg-[url("/design_assets/party_logo/ภูมิใจไทย.png")] bg-contain bg-center' /> },
-  { party: "ประชาธิปัตย์", item: <div className='w-[15px] h-[15px] bg-[url("/design_assets/party_logo/ประชาธิปัตย์.png")] bg-contain bg-center' /> },
-  { party: "เพื่อไทย", item: <div className='w-[15px] h-[15px] bg-[url("/design_assets/party_logo/เพื่อไทย.png")] bg-contain bg-center' /> },
-  { party: "อนาคตใหม่/ก้าวไกล", item: <div className='w-[15px] h-[15px] bg-[url("/design_assets/party_logo/ก้าวไกล.png")] bg-contain bg-center' /> },
-  { party: "เสรีรวมไทย", item: <div className='w-[15px] h-[15px] bg-[url("/design_assets/party_logo/เสรีรวมไทย.png")] bg-contain bg-center' /> },
+  { party: "เปรียบเทียบทุกพรรค", item: <div className='w-[15px] h-[15px] relative'><Image src="/design_assets/party_logo/เปรียบเทียบทุกพรรค.png" alt="เปรียบเทียบทุกพรรค" objectFit='cover' layout='fill' /></div> },
+  { party: "พลังประชารัฐ", item: <div className='w-[15px] h-[15px] relative'><Image src="/design_assets/party_logo/พลังประชารัฐ.png" alt="พลังประชารัฐ" objectFit='cover' layout='fill' /></div> },
+  { party: "ภูมิใจไทย", item: <div className='w-[15px] h-[15px] relative'><Image src="/design_assets/party_logo/ภูมิใจไทย.png" alt="ภูมิใจไทย" objectFit='cover' layout='fill' /></div> },
+  { party: "ประชาธิปัตย์", item: <div className='w-[15px] h-[15px] relative'><Image src="/design_assets/party_logo/ประชาธิปัตย์.png" alt="ประชาธิปัตย์" objectFit='cover' layout='fill' /></div> },
+  { party: "เพื่อไทย", item: <div className='w-[15px] h-[15px] relative'><Image src="/design_assets/party_logo/เพื่อไทย.png" alt="เพื่อไทย" objectFit='cover' layout='fill' /></div> },
+  { party: "อนาคตใหม่/ก้าวไกล", item: <div className='w-[15px] h-[15px] relative'><Image src="/design_assets/party_logo/ก้าวไกล.png" alt="ก้าวไกล" objectFit='cover' layout='fill' /></div> },
+  { party: "เสรีรวมไทย", item: <div className='w-[15px] h-[15px] relative'><Image src="/design_assets/party_logo/เสรีรวมไทย.png" alt="เสรีรวมไทย" objectFit='cover' layout='fill' /></div> },
 ]
 
 const VisualCommunication = (props: Props) => {

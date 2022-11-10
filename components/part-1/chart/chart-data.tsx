@@ -1,7 +1,6 @@
 export const GOVERNMENT = [
   {
     name: "พลังประชารัฐ",
-    logo: <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/พลังประชารัฐ.png")] bg-contain bg-no-repeat bg-center' />,
     al: 5.42,
     fb: 5.24,
     tw: 0.01,
@@ -2429,7 +2428,6 @@ export const GOVERNMENT = [
   },
   {
     name: "ภูมิใจไทย",
-    logo: <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/ภูมิใจไทย.png")] bg-contain bg-no-repeat bg-center' />,
     al: 3.96,
     fb: 3.59,
     yt: 0.37,
@@ -4975,7 +4973,6 @@ export const GOVERNMENT = [
   },
   {
     name: "ประชาธิปัตย์",
-    logo: <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/ประชาธิปัตย์.png")] bg-contain bg-no-repeat bg-center' />,
     al: 17.72,
     fb: 9.35,
     tw: 6.34,
@@ -9058,7 +9055,6 @@ export const GOVERNMENT = [
 export const OPPOSITION = [
   {
     name: "เพื่อไทย",
-    logo: <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/เพื่อไทย.png")] bg-contain bg-no-repeat bg-center' />,
     al: 15.05,
     fb: 3.55,
     tw: 9.32,
@@ -12654,7 +12650,6 @@ export const OPPOSITION = [
   },
   {
     name: "อนาคตใหม่/ก้าวไกล",
-    logo: <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/ก้าวไกล.png")] bg-contain bg-no-repeat bg-center' />,
     al: 11.31,
     fb: 2.77,
     tw: 7.7,
@@ -16440,7 +16435,6 @@ export const OPPOSITION = [
   },
   {
     name: "เสรีรวมไทย",
-    logo: <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/เสรีรวมไทย.png")] bg-contain bg-no-repeat bg-center' />,
     al: 2.21,
     fb: 1.81,
     yt: 0.40,

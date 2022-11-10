@@ -1,5 +1,6 @@
+import Image from 'next/image'
 import React, { useState, UIEvent, useRef, useEffect } from 'react'
-import { HeadDecorationLeft, HeadDecorationRight } from "../utils"
+import { getLogo, HeadDecorationLeft, HeadDecorationRight } from "../utils"
 import ScrollableArrow from '../utils/scrollable-arrow'
 
 type Props = {}
@@ -7,41 +8,41 @@ type Props = {}
 const CHART_GOVERNMENT = [
   {
     party: "พลังประชารัฐ",
-    topic: <div className='bg-[url("/design_assets/chart/chart06_feedback/topic/palangpracharat.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    member: <div className='bg-[url("/design_assets/chart/chart06_feedback/member/palangpracharat.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    competitor: <div className='bg-[url("/design_assets/chart/chart06_feedback/competitor/palangpracharat.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/palangpracharat.png" alt="/topic/palangpracharat.png" objectFit='cover' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/palangpracharat.png" alt="/member/palangpracharat.png" objectFit='cover' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/palangpracharat.png" alt="/competitor/palangpracharat.png" objectFit='cover' layout='fill' /></div>,
   },
   {
     party: "ภูมิใจไทย",
-    topic: <div className='bg-[url("/design_assets/chart/chart06_feedback/topic/phumjaithai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    member: <div className='bg-[url("/design_assets/chart/chart06_feedback/member/phumjaithai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    competitor: <div className='bg-[url("/design_assets/chart/chart06_feedback/competitor/phumjaithai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/phumjaithai.png" alt="/topic/phumjaithai.png" objectFit='cover' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/phumjaithai.png" alt="/member/phumjaithai.png" objectFit='cover' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/phumjaithai.png" alt="/competitor/phumjaithai.png" objectFit='cover' layout='fill' /></div>,
   },
   {
     party: "ประชาธิปัตย์",
-    topic: <div className='bg-[url("/design_assets/chart/chart06_feedback/topic/prachatipat.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    member: <div className='bg-[url("/design_assets/chart/chart06_feedback/member/prachatipat.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    competitor: <div className='bg-[url("/design_assets/chart/chart06_feedback/competitor/prachatipat.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/prachatipat.png" alt="/topic/prachatipat.png" objectFit='cover' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/prachatipat.png" alt="/member/prachatipat.png" objectFit='cover' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/prachatipat.png" alt="/competitor/prachatipat.png" objectFit='cover' layout='fill' /></div>,
   },
 ]
 const CHART_OPPOSITION = [
   {
     party: "เพื่อไทย",
-    topic: <div className='bg-[url("/design_assets/chart/chart06_feedback/topic/puerthai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    member: <div className='bg-[url("/design_assets/chart/chart06_feedback/member/puerthai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    competitor: <div className='bg-[url("/design_assets/chart/chart06_feedback/competitor/puerthai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/puerthai.png" alt="/topic/puerthai.png" objectFit='cover' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/puerthai.png" alt="/member/puerthai.png" objectFit='cover' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/puerthai.png" alt="/competitor/puerthai.png" objectFit='cover' layout='fill' /></div>,
   },
   {
     party: "อนาคตใหม่/ก้าวไกล",
-    topic: <div className='bg-[url("/design_assets/chart/chart06_feedback/topic/kawklai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    member: <div className='bg-[url("/design_assets/chart/chart06_feedback/member/kawklai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    competitor: <div className='bg-[url("/design_assets/chart/chart06_feedback/competitor/kawklai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/kawklai.png" alt="/topic/kawklai.png" objectFit='cover' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/kawklai.png" alt="/member/kawklai.png" objectFit='cover' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/kawklai.png" alt="/competitor/kawklai.png" objectFit='cover' layout='fill' /></div>,
   },
   {
     party: "เสรีรวมไทย",
-    topic: <div className='bg-[url("/design_assets/chart/chart06_feedback/topic/seriruamthai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    member: <div className='bg-[url("/design_assets/chart/chart06_feedback/member/seriruamthai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
-    competitor: <div className='bg-[url("/design_assets/chart/chart06_feedback/competitor/seriruamthai.png")] bg-top bg-no-repeat bg-contain w-[150px] h-[221.31px]' />,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/seriruamthai.png" alt="/topic/seriruamthai.png" objectFit='cover' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/seriruamthai.png" alt="/member/seriruamthai.png" objectFit='cover' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/seriruamthai.png" alt="/competitor/seriruamthai.png" objectFit='cover' layout='fill' /></div>,
   },
 ]
 
@@ -54,18 +55,7 @@ const RenderChart: React.FC<{ title: string }> = ({ title }) => {
       default: return "";
     }
   }
-  const getLogo = (party: string) => {
-    switch (party) {
-      case "พลังประชารัฐ": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/พลังประชารัฐ.png")] bg-contain bg-center' />
-      case "ภูมิใจไทย": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/ภูมิใจไทย.png")] bg-contain bg-center' />
-      case "ประชาธิปัตย์": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/ประชาธิปัตย์.png")] bg-contain bg-center' />
-      case "เพื่อไทย": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/เพื่อไทย.png")] bg-contain bg-center' />
-      case "อนาคตใหม่/ก้าวไกล": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/ก้าวไกล.png")] bg-contain bg-center' />
-      case "เสรีรวมไทย": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/เสรีรวมไทย.png")] bg-contain bg-center' />
-      default:
-        break;
-    }
-  }
+
   const [showArrow, setShowArrow] = useState<boolean>(true)
   const horizontalScrollRef = useRef<HTMLDivElement>(null)
   useEffect(() => {

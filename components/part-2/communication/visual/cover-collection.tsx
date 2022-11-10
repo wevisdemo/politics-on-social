@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-import { HeadDecorationLeft, HeadDecorationRight } from '../../../utils'
+import { getLogoSmall, HeadDecorationLeft, HeadDecorationRight } from '../../../utils'
 import moment from "moment"
 
 import { scaleLinear } from 'd3-scale'
 import CoverChart from './cover-chart'
+import Image from 'next/image'
 type Props = {}
 
 const COVER_COLLECTION = [
@@ -1132,20 +1133,6 @@ const COVER_COLLECTION = [
 ]
 
 
-
-const getLogo = (party: string) => {
-  switch (party) {
-    case "พลังประชารัฐ": return <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/พลังประชารัฐ.png")] bg-contain bg-center' />
-    case "ภูมิใจไทย": return <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/ภูมิใจไทย.png")] bg-contain bg-center' />
-    case "ประชาธิปัตย์": return <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/ประชาธิปัตย์.png")] bg-contain bg-center' />
-    case "เพื่อไทย": return <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/เพื่อไทย.png")] bg-contain bg-center' />
-    case "อนาคตใหม่/ก้าวไกล": return <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/ก้าวไกล.png")] bg-contain bg-center' />
-    case "เสรีรวมไทย": return <div className='w-[20px] h-[20px] bg-[url("/design_assets/party_logo/เสรีรวมไทย.png")] bg-contain bg-center' />
-    default:
-      break;
-  }
-}
-
 const PartyCoverCollection = ({ collection, counter }: { collection: typeof COVER_COLLECTION[number], counter: number }) => {
   const [selectIndex, setSelectIndex] = useState(0)
   useEffect(() => {
@@ -1178,7 +1165,7 @@ const PartyCoverCollection = ({ collection, counter }: { collection: typeof COVE
       <div className='flex flex-row justify-between items-center'>
         <div className='flex flex-row items-center gap-x-[5px] leading-[15px] mb-[5px]'>
           <div>
-            {getLogo(collection.party)}
+            {getLogoSmall(collection.party)}
           </div>
           <div className='wv-font-anuphan wv-b7
           wv-b7 tablet:leading-[18px]'>

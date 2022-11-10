@@ -1,8 +1,9 @@
+import dynamic from 'next/dynamic'
 import React from 'react'
-import MentionCommunication from './communication/competitor/mention-communication'
-import PersonCommunication from './communication/member/person-communication'
-import TopicCommunication from './communication/topic/topic-communication'
-import VisualCommunication from './communication/visual/visual-communication'
+const MentionCommunication = dynamic(() => import('./communication/competitor/mention-communication'))
+const PersonCommunication = dynamic(() => import('./communication/member/person-communication'))
+const TopicCommunication = dynamic(() => import('./communication/topic/topic-communication'))
+const VisualCommunication = dynamic(() => import('./communication/visual/visual-communication'))
 
 type Props = {}
 

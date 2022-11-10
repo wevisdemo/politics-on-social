@@ -329,6 +329,8 @@ import React, { useState, useEffect, useRef } from 'react'
 import moment from 'moment'
 import 'moment/locale/th'
 import ScrollableArrow from '../../../utils/scrollable-arrow'
+import Image from 'next/image'
+import { getLogo } from '../../../utils'
 
 
 type Props = {}
@@ -341,18 +343,7 @@ const CompetitorPostCollection = ({ party }: {
     setPostItem(COMPETITOR_COMMUNICATION_POST.filter((data) => data.party === party))
   }, [party])
 
-  const getLogo = (party: string) => {
-    switch (party) {
-      case "พลังประชารัฐ": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/พลังประชารัฐ.png")] bg-contain bg-center' />
-      case "ภูมิใจไทย": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/ภูมิใจไทย.png")] bg-contain bg-center' />
-      case "ประชาธิปัตย์": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/ประชาธิปัตย์.png")] bg-contain bg-center' />
-      case "เพื่อไทย": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/เพื่อไทย.png")] bg-contain bg-center' />
-      case "อนาคตใหม่/ก้าวไกล": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/ก้าวไกล.png")] bg-contain bg-center' />
-      case "เสรีรวมไทย": return <div className='w-[30px] h-[30px] bg-[url("/design_assets/party_logo/เสรีรวมไทย.png")] bg-contain bg-center' />
-      default:
-        break;
-    }
-  }
+
 
   const getPostChanelLogo = (postchannel: string) => {
     switch (postchannel) {

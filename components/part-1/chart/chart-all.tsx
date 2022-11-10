@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadDecorationLeft, HeadDecorationRight } from '../../utils'
+import { getLogoSmall, HeadDecorationLeft, HeadDecorationRight } from '../../utils'
 import { GOVERNMENT, OPPOSITION } from './chart-data'
 
 type Props = {}
@@ -94,7 +94,7 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
           <div key={`gov-${data.name}`} className={` mt-[34px] ${typeof getAvg(data) !== "undefined" ? "" : "opacity-50"}`}>
             <div className='desktop:flex desktop:flex-row desktop:justify-between'>
               <div className='flex gap-[5px] justify-start'>
-                {data.logo}
+                {getLogoSmall(data.name)}
                 <div className='wv-font-anuphan wv-font-bold
                   wv-b7 leading-[15px]
                   wv-b7 desktop:leading-[18px]'>
@@ -137,7 +137,7 @@ const ChartAll = ({ type }: { type: "all" | "facebook" | "twitter" | "youtube" }
           <div key={`opp-${data.name}`} className={` mt-[34px] ${typeof getAvg(data) !== "undefined" ? "" : "opacity-50"}`}>
             <div className='desktop:flex desktop:flex-row desktop:justify-between'>
               <div className='flex gap-[5px] justify-start'>
-                {data.logo}
+                {getLogoSmall(data.name)}
                 <div className='wv-font-anuphan wv-font-bold
                   wv-b7 leading-[15px]
                   wv-b7 desktop:leading-[18px]'>

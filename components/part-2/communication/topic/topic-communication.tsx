@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
 import { HeadDecorationLeft, HeadDecorationRight } from '../../../utils'
 import TopicPostCollection from './topic-post-collection'
+import Image from 'next/image'
 type Props = {}
 
 const GOVERNMENT = [
   {
     party: "พลังประชารัฐ",
-    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] bg-[url("/design_assets/chart/chart03_topic/palangpracharat.png")] bg-contain bg-center' />,
+    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] relative'><Image src="/design_assets/chart/chart03_topic/palangpracharat.png" alt="palangpracharat" objectFit='cover' layout='fill' /></div>,
   },
   {
     party: "ภูมิใจไทย",
-    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] bg-[url("/design_assets/chart/chart03_topic/phumjaithai.png")] bg-contain bg-center' />,
+    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] relative'><Image src="/design_assets/chart/chart03_topic/phumjaithai.png" alt="phumjaithai" objectFit='cover' layout='fill' /></div>,
   },
   {
     party: "ประชาธิปัตย์",
-    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] bg-[url("/design_assets/chart/chart03_topic/prachatipat.png")] bg-contain bg-center' />,
+    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] relative'><Image src="/design_assets/chart/chart03_topic/prachatipat.png" alt="prachatipat" objectFit='cover' layout='fill' /></div>,
   },
 
 ]
@@ -22,25 +23,25 @@ const GOVERNMENT = [
 const OPPOSITION = [
   {
     party: "เพื่อไทย",
-    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] bg-[url("/design_assets/chart/chart03_topic/puerthai.png")] bg-contain bg-center' />,
+    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] relative'><Image src="/design_assets/chart/chart03_topic/puerthai.png" alt="puerthai" objectFit='cover' layout='fill' /></div>,
   },
   {
     party: "อนาคตใหม่/ก้าวไกล",
-    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] bg-[url("/design_assets/chart/chart03_topic/kawklai.png")] bg-contain bg-center' />,
+    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] relative'><Image src="/design_assets/chart/chart03_topic/kawklai.png" alt="kawklai" objectFit='cover' layout='fill' /></div>,
   },
   {
     party: "เสรีรวมไทย",
-    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] bg-[url("/design_assets/chart/chart03_topic/seriruamthai.png")] bg-contain bg-center' />,
+    content: <div className='w-[140px] h-[140px] tablet:w-[251px] tablet:h-[251px] relative'><Image src="/design_assets/chart/chart03_topic/seriruamthai.png" alt="seriruamthai" objectFit='cover' layout='fill' /></div>,
   },
 ]
 
 const DROPDOWN_COLLECTION = [
-  { topic: "โควิด", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/covid.png")] bg-contain bg-center' /><div>โควิด</div></div> },
-  { topic: "เศรษฐกิจ", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/economic.png")] bg-contain bg-center' /><div>เศรษฐกิจ</div></div> },
-  { topic: "กัญชา", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/ganja.png")] bg-contain bg-center' /><div>กัญชา</div></div> },
-  { topic: "ความเท่าเทียมทางเพศ", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/lgbtq.png")] bg-contain bg-center' /><div>ความเท่าเทียมทางเพศ</div></div> },
-  { topic: "การชุมนุม", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/movement.png")] bg-contain bg-center' /><div>การชุมนุม</div></div> },
-  { topic: "สถาบันพระมหากษัตริย์", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] bg-[url("/design_assets/topic_icon/royal.png")] bg-contain bg-center' /><div>สถาบันพระมหากษัตริย์</div></div> },
+  { topic: "โควิด", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/covid.png" alt="covid" objectFit='cover' layout='fill' /></div><div>โควิด</div></div> },
+  { topic: "เศรษฐกิจ", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/economic.pn" alt="economi" objectFit='cover' layout='fill' /></div><div>เศรษฐกิจ</div></div> },
+  { topic: "กัญชา", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/ganja.png" alt="ganja" objectFit='cover' layout='fill' /></div><div>กัญชา</div></div> },
+  { topic: "ความเท่าเทียมทางเพศ", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/lgbtq.png" alt="lgbtq" objectFit='cover' layout='fill' /></div><div>ความเท่าเทียมทางเพศ</div></div> },
+  { topic: "การชุมนุม", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/movement.pn" alt="movemen" objectFit='cover' layout='fill' /></div><div>การชุมนุม</div></div> },
+  { topic: "สถาบันพระมหากษัตริย์", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/royal.png" alt="royal" objectFit='cover' layout='fill' /></div><div>สถาบันพระมหากษัตริย์</div></div> },
 ]
 
 
@@ -68,12 +69,12 @@ const TopicCommunication = (props: Props) => {
       <div className='flex flex-row flex-wrap justify-center gap-y-[5px] gap-x-[20px] !my-[28px]
         wv-font-anuphan wv-font-bold leading-[21px] wv-b5
         tablet:text-desktopb-bold-b5 tablet:leading-[24px]'>
-        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] bg-[url("/design_assets/topic_icon/covid.png")] bg-contain bg-center' /><div>โควิด</div></div>
-        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] bg-[url("/design_assets/topic_icon/economic.png")] bg-contain bg-center' /><div>เศรษฐกิจ</div></div>
-        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] bg-[url("/design_assets/topic_icon/ganja.png")] bg-contain bg-center' /><div>กัญชา</div></div>
-        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] bg-[url("/design_assets/topic_icon/lgbtq.png")] bg-contain bg-center' /><div>ความเท่าเทียมทางเพศ</div></div>
-        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] bg-[url("/design_assets/topic_icon/movement.png")] bg-contain bg-center' /><div>การชุมนุม</div></div>
-        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] bg-[url("/design_assets/topic_icon/royal.png")] bg-contain bg-center' /><div>สถาบันพระมหากษัตริย์</div></div>
+        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] relative'><Image src="/design_assets/topic_icon/covid.png" alt="covid" objectFit='cover' layout='fill' /></div><div>โควิด</div></div>
+        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] relative'><Image src="/design_assets/topic_icon/economic.png" alt="economic" objectFit='cover' layout='fill' /></div><div>เศรษฐกิจ</div></div>
+        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] relative'><Image src="/design_assets/topic_icon/ganja.png" alt="ganja" objectFit='cover' layout='fill' /></div><div>กัญชา</div></div>
+        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] relative'><Image src="/design_assets/topic_icon/lgbtq.png" alt="lgbtq" objectFit='cover' layout='fill' /></div><div>ความเท่าเทียมทางเพศ</div></div>
+        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] relative'><Image src="/design_assets/topic_icon/movement.png" alt="movement" objectFit='cover' layout='fill' /></div><div>การชุมนุม</div></div>
+        <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] relative'><Image src="/design_assets/topic_icon/royal.png" alt="royal" objectFit='cover' layout='fill' /></div><div>สถาบันพระมหากษัตริย์</div></div>
       </div>
       <div className='wv-font-anuphan leading-[15px]
          !my-[28px] w-[200px] !mx-auto wv-b7 text-center opacity-50
