@@ -1,21 +1,20 @@
+import moment from 'moment'
 import React, { useState } from 'react'
-import { HeadDecorationLeft, HeadDecorationRight } from '../../../utils'
+import { getLogo, getPostChanelLogo, HeadDecorationLeft, HeadDecorationRight } from '../../../utils'
 import { GOVERNMENT, OPPOSITION } from './member-data'
 type Props = {}
 
+type Member = typeof GOVERNMENT[number]['members'][number]
 
-const Info = ({ members }: {
-  members: {
-    name: string;
-    position: string;
-    percent: number;
-    pos?: string;
-  }[]
+const Info = ({ members, handleClick }: {
+  members: typeof GOVERNMENT[number]['members']
+  handleClick: Function
 }) => {
   const [selectIndex, setSelectIndex] = useState(-1)
+
   return (
     <div className='absolute top-0 left-0 right-0 bottom-0'
-      onClick={() => setSelectIndex(-1)}
+      onClick={() => { setSelectIndex(-1) }}
       onMouseOver={() => setSelectIndex(-1)}>
       <div className='relative' >
         {members.map((member, index) =>
@@ -25,10 +24,8 @@ const Info = ({ members }: {
           ${member.pos} border-green border-[2px]
           `}
             onClick={(e) => {
-              if (selectIndex !== index)
-                setSelectIndex(index)
-              else
-                setSelectIndex(-1)
+              handleClick(member)
+              setSelectIndex(index)
               e.stopPropagation()
             }}
             onMouseOver={(e) => {
@@ -57,13 +54,77 @@ const Info = ({ members }: {
           </div>
         )}
       </div>
-    </div >
-
+    </div>
   );
+}
+
+const SamplePost = ({
+  party,
+  postchannel,
+  postdate,
+  postmessage,
+  postengagement,
+  postreaction,
+  postcomment,
+  postshare,
+  posturl,
+  handleClick }: {
+    party: string;
+    postchannel: string;
+    postdate: string;
+    postmessage: string;
+    postengagement: number;
+    postreaction: number;
+    postcomment: number;
+    postshare: number;
+    posturl: string;
+    pos: string;
+    handleClick: Function
+  }) => {
+  return (
+    <div key={`${party}`}
+      className='flex-none w-[260px] bg-white rounded-[5px] p-[15px] h-auto relative'>
+      <svg className='z-40 w-[30px] h-[30px] absolute -top-[15px] -right-[15px] cursor-pointer' onClick={() => handleClick(null)} viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width={29} height={29} rx="14.5" fill="black" />
+        <line x1="7.9609" y1="21.7177" x2="22.103" y2="7.5756" stroke="white" />
+        <line x1="7.89701" y1="7.57516" x2="22.0391" y2="21.7173" stroke="white" />
+        <rect x="0.5" y="0.5" width={29} height={29} rx="14.5" stroke="white" />
+      </svg>
+      <a href={posturl} target="_blank" rel='noreferrer'>
+        <div className='flex flex-row justify-between items-center'>
+          <div className='flex flex-row items-center'>
+            <div>{getLogo(party)}</div>
+            <div className='-ml-[5px]'>{getPostChanelLogo(postchannel)}</div>
+          </div>
+          <div className='wv-font-anuphan 
+    wv-b7 text-black opacity-60'>
+            {moment(postdate, "YYYY-MM-DD").locale('th').format('ll')}
+          </div>
+        </div >
+        <div className='wv-font-anuphan text-left break-words 
+    wv-b5 text-black scrollbar-hide line-clamp-6
+    border-b-[1px] border-gray !mt-[5px] pb-[2px] '>
+          {postmessage}
+        </div>
+        <div className=' mt-[5px]'>
+          <div className='flex items-start text-black gap-x-[5px]'>
+            <div className='wv-font-anuphan wv-font-bold wv-b6'>{postengagement}</div>
+            <div className='wv-font-anuphan wv-b6'>Engagement</div>
+          </div>
+          <div className='wv-font-anuphan wv-b7 text-black opacity-70 text-left'>
+            {`${postreaction} reactions + ${postcomment} comments + ${postshare} shares`}
+          </div>
+        </div>
+      </a >
+
+    </div >
+  )
 }
 
 
 const PersonCommunication = (props: Props) => {
+  const [selectedSampleData, setSelectedSampleData] = useState<typeof GOVERNMENT[number]['members'][number] | null>()
+
   return (
     <div className='py-[40px]'>
       <div className=' px-[20px] flex flex-col gap-[10px]'>
@@ -132,10 +193,8 @@ const PersonCommunication = (props: Props) => {
                   {data.party}
                 </div>
                 <div className='w-[250px] h-[250px] relative'>
-                  <div className='absolute top-0 left-0'>
-                    {data.content}
-                  </div>
-                  <Info members={data.members} />
+                  {data.content}
+                  <Info members={data.members} handleClick={setSelectedSampleData} />
                 </div>
               </div>
             ))}
@@ -160,13 +219,23 @@ const PersonCommunication = (props: Props) => {
                 </div>
                 <div className='w-[250px] h-[250px] relative'>
                   {data.content}
-                  <Info members={data.members} />
+                  <Info members={data.members} handleClick={setSelectedSampleData} />
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+      {selectedSampleData &&
+        <div className={`relative z-20 ${selectedSampleData ? "visible" : "invisible"} `}>
+          <div className="fixed inset-0 bg-black-3 bg-opacity-50 transition-opacity" />
+          <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0" onClick={() => setSelectedSampleData(null)}>
+              <SamplePost {...selectedSampleData as Omit<Member, "position" | "percent">} handleClick={setSelectedSampleData} />
+            </div>
+          </div>
+        </div>
+      }
     </div>
   )
 }
