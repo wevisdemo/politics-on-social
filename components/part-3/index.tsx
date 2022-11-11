@@ -16,7 +16,7 @@ const CHART_GOVERNMENT = [
     party: "ภูมิใจไทย",
     topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/phumjaithai.png" alt="/topic/phumjaithai.png" objectFit='cover' layout='fill' /></div>,
     member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/phumjaithai.png" alt="/member/phumjaithai.png" objectFit='cover' layout='fill' /></div>,
-    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/phumjaithai.png" alt="/competitor/phumjaithai.png" objectFit='cover' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/phumjaithai.png" alt="/competitor/phumjaithai.png" objectPosition='top' objectFit='contain' layout='fill' /></div>,
   },
   {
     party: "ประชาธิปัตย์",

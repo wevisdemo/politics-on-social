@@ -1,6 +1,7 @@
 import moment from 'moment'
 import React, { useState } from 'react'
 import { getLogo, getPostChanelLogo, HeadDecorationLeft, HeadDecorationRight } from '../../../utils'
+import ToolTip from '../../../utils/tooltip'
 import { GOVERNMENT, OPPOSITION } from './member-data'
 type Props = {}
 
@@ -149,9 +150,28 @@ const PersonCommunication = (props: Props) => {
         </div>
       </div>
       <div className='wv-font-anuphan leading-[15px]
-         !my-[10px] !mb-[60px] w-[280px] !mx-auto text-desktop-regular-b7 text-center opacity-50
+         !my-[10px] !mb-[60px] w-[280px] !mx-auto text-desktop-regular-b7 text-center text-gray-2
          tablet:w-[500px] desktop:w-auto wv-b7 tablet:leading-[18px]'>
-        <span className='wv-font-bold'>คำนวณ %</span> จากจำนวนโพสต์ที่ในแคปชันมี<br className='tablet:hidden' /><span className='underline text-green'>ชื่อ-นามสกุลสมาชิกพรรคตำแหน่งสำคัญ</span> <span className='wv-font-bold'>ต่อจำนวนโพสต์ทั้งหมดของแต่ละพรรค</span> โดย 1 โพสต์สามารถมีได้มากกว่า 1 ชื่อ
+        <span className='wv-font-bold'>คำนวณ %</span> จากจำนวนโพสต์ที่ในแคปชันมี<br className='tablet:hidden' />
+        <ToolTip tooltip={
+          <div className='w-[200px] tablet:w-[490px] mx-auto whitespace-pre-wrap'>
+            <div className='bg-gray text-black p-[20px]'>
+              <div className='!mb-[20px] wv-b7 text-left'>
+                เกณฑ์ในการเลือกสมาชิกพรรคตำแหน่งสำคัญ
+              </div>
+              <ul className='list-disc list-inside text-left wv-b5'>
+                <li>เป็นคณะกรรมการบริหารพรรค ช่วง 1 พ.ค. 62 - 31 ส.ค. 65</li>
+                <li>เป็นแคนดิเดตนายกฯ หรือ ผู้ว่าฯ กทม. ช่วง 1 พ.ค. 62 - 31 ก.ค. 65</li>
+                <li>เป็นสมาชิกพรรคที่มีตำแหน่งบริหารใน ครม. ช่วง 1 พ.ค. 62 - 31 ก.ค. 65</li>
+              </ul>
+            </div>
+          </div>
+        }>
+          <span className='underline text-green'>
+            ชื่อ-นามสกุลสมาชิกพรรคตำแหน่งสำคัญ
+          </span>
+        </ToolTip>
+        <span className='wv-font-bold'>ต่อจำนวนโพสต์ทั้งหมดของแต่ละพรรค</span> โดย 1 โพสต์สามารถมีได้มากกว่า 1 ชื่อ
       </div>
       <div className='flex flex-col items-center tablet:flex-row !my-[30px] 
         wv-font-anuphan text-desktop-regular-b6
@@ -226,7 +246,8 @@ const PersonCommunication = (props: Props) => {
           </div>
         </div>
       </div>
-      {selectedSampleData &&
+      {
+        selectedSampleData &&
         <div className={`relative z-20 transition-all ${selectedSampleData ? "visible" : "invisible"} `}>
           <div className="fixed inset-0 bg-black-3 bg-opacity-50 transition-opacity" />
           <div className="fixed inset-0 z-10 overflow-y-auto">
@@ -236,7 +257,7 @@ const PersonCommunication = (props: Props) => {
           </div>
         </div>
       }
-    </div>
+    </div >
   )
 }
 

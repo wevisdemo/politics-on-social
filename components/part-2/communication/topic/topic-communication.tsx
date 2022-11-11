@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { HeadDecorationLeft, HeadDecorationRight } from '../../../utils'
 import TopicPostCollection from './topic-post-collection'
 import Image from 'next/image'
+import ToolTip from '../../../utils/tooltip'
 type Props = {}
 
 const GOVERNMENT = [
@@ -77,9 +78,58 @@ const TopicCommunication = (props: Props) => {
         <div className='flex flex-row items-center gap-[5px]'><div className='w-[30px] h-[30px] tablet:w-[50px] tablet:h-[50px] relative'><Image src="/design_assets/topic_icon/royal.png" alt="royal" objectFit='cover' layout='fill' /></div><div>สถาบันพระมหากษัตริย์</div></div>
       </div>
       <div className='wv-font-anuphan leading-[15px]
-         !my-[28px] w-[200px] !mx-auto wv-b7 text-center opacity-50
+         !my-[28px] w-[200px] !mx-auto wv-b7 text-center text-gray-2
          tablet:w-[500px] desktop:w-auto wv-b7 tablet:leading-[18px]'>
-        <span className='wv-font-bold'>คำนวณ %</span> จากจำนวนโพสต์ที่ในแคปชันมี<span className='text-green'>คีย์เวิร์ด</span>ที่เกี่ยวของกับแต่ละประเด็น <span className='wv-font-bold'>ต่อจำนวนโพสต์ทั้งหมดของแต่ละพรรค</span> โดย 1 โพสต์สามารถมีได้มากกว่า 1 ประเด็น
+        <span className='wv-font-bold'>คำนวณ %</span> จากจำนวนโพสต์ที่ในแคปชันมี
+        <ToolTip tooltip={
+          <div className=' mx-auto wv-font-anuphan'>
+            <div className='bg-gray text-black p-[20px] flex flex-col gap-y-[20px] w-[300px] tablet:w-[620px] desktop:w-[840px] break-words whitespace-pre-wrap'>
+              <div className=' wv-b7 text-left'>
+                คีย์เวิร์ดที่ใช้ในการระบุเนื้อหาแต่ละด้าน :
+              </div>
+              <div>
+                <div className='text-left wv-b5 wv-font-bold'>โควิด</div>
+                <div className='text-left wv-b5'>
+                  โควิด, COVID, วัคซีน, ไวรัส, ระลอก, Quarantine, กักตัว, หน้ากากอนามัย, โคโรนา, hospitel, ไฟเซอร์, pfizer, ซิโนแวค, sinovac, โมเดอร์นา, moderna, แอสตรา, astrazeneca, เจลแอลกอฮอล์, ภูมิคุ้มกัน, ล็อกดาวน์ม coronavirus, atk, พิราเวียร์, omicron, โอไมครอน, โอมิครอน, หมอพร้อม, ศบค, สยามไบโอไซเอนซ์, siambioscience, mrna, หมอชนะ
+                </div>
+              </div>
+              <div>
+                <div className='text-left wv-b5 wv-font-bold'>เศรษฐกิจ</div>
+                <div className='text-left wv-b5'>
+                  เศรษฐกิจ, ปากท้อง, ผูกขาด, ยากจน, เหลื่อมล้ำ, รวย, เงินกู้, หนี้, คลัง, พาณิชย์, การค้า, จีดีพี, gdp, SMEs, คนจน, คนละครึ่ง, ค่าไฟแพง, ของแพง, น้ำมันแพง, หมูแพง, รถไฟฟ้าแพง, แพงทั้งแผ่นดิน, ขูดรีด, ควบรวมกิจการ, ค่าเทอม, เจ้าสัว, อยู่ดีกินดี
+                </div>
+              </div>
+              <div>
+                <div className='text-left wv-b5 wv-font-bold'>กัญชา</div>
+                <div className='text-left wv-b5'>
+                  กัญชา, กัญชง
+                </div>
+              </div>
+              <div>
+                <div className='text-left wv-b5 wv-font-bold'>ความเท่าเทียมทางเพศ</div>
+                <div className='text-left wv-b5'>
+                  ความเท่าเทียมทางเพศ, สมรสเท่าเทียม, พรบคู่ชีวิต, LGBT, LGBT+, LGBTQ, LGBTQI, LGBTIQ, LGBTQIA, pride, ไพรด์พาเหรด, นฤมิตไพรด์, pridemonth
+                </div>
+              </div>
+              <div>
+                <div className='text-left wv-b5 wv-font-bold'>การชุมนุม</div>
+                <div className='text-left wv-b5'>
+                  ม็อบ, ชุมนุม, ประท้วง, เคลื่อนไหว, สลายการชุมนุม, ประท้วง, ประกันตัว, ปล่อยเพื่อนเรา, หยุดคุกคามประชาชน, ประชาชนปลดแอก, คฝ, เยาวชนปลดแอก, ให้มันจบที่รุ่นเรา, ทะลุฟ้า, ยืนหยุดขัง
+                </div>
+              </div>
+              <div>
+                <div className='text-left wv-b5 wv-font-bold'>สถาบันพระมหากษัตริย์</div>
+                <div className='text-left wv-b5'>
+                  ปฏิรูปสถาบัน, มาตรา112, ม112, ยกเลิก112, กษัตริย์, พระราชดำริ, พรก.โอนกำลังพล, พรกโอนกำลังพล, ขบวนเสด็จ, งบสถาบัน
+                  ราชการในพระองค์, พระราชทาน, เทิดพระเกียรติ
+                </div>
+              </div>
+            </div>
+          </div>
+        }>
+          <span className='underline text-green'>คีย์เวิร์ด</span>
+        </ToolTip>
+        ที่เกี่ยวของกับแต่ละประเด็น <span className='wv-font-bold'>ต่อจำนวนโพสต์ทั้งหมดของแต่ละพรรค</span> โดย 1 โพสต์สามารถมีได้มากกว่า 1 ประเด็น
       </div>
       <div className='flex flex-row justify-center
         divide-x desktop:mb-[40px]'>

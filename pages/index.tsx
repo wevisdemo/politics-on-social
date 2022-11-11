@@ -22,7 +22,7 @@ const Outro = dynamic(() => import('../components/outro'), { loading: () => <Spi
 const Home: NextPage = () => {
   const router = useRouter()
   return (
-    <div className='bg-black-1 text-white'>
+    <div className='bg-black-1 text-white overflow-y-hidden'>
       <Head>
         <title>Wevis | Politics on Social</title>
         <link rel="icon" href="/design_assets/sns/favicon.png" />
