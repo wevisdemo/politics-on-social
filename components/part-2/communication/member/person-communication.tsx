@@ -83,7 +83,7 @@ const SamplePost = ({
   }) => {
   return (
     <div key={`${party}`}
-      className='flex-none w-[260px] bg-white rounded-[5px] p-[15px] h-auto relative'>
+      className=' w-[260px] desktop:w-[536px] bg-white rounded-[5px] p-[15px] h-auto relative'>
       <svg className='z-40 w-[30px] h-[30px] absolute -top-[15px] -right-[15px] cursor-pointer' onClick={() => handleClick(null)} viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="0.5" y="0.5" width={29} height={29} rx="14.5" fill="black" />
         <line x1="7.9609" y1="21.7177" x2="22.103" y2="7.5756" stroke="white" />
@@ -227,10 +227,10 @@ const PersonCommunication = (props: Props) => {
         </div>
       </div>
       {selectedSampleData &&
-        <div className={`relative z-20 ${selectedSampleData ? "visible" : "invisible"} `}>
+        <div className={`relative z-20 transition-all ${selectedSampleData ? "visible" : "invisible"} `}>
           <div className="fixed inset-0 bg-black-3 bg-opacity-50 transition-opacity" />
           <div className="fixed inset-0 z-10 overflow-y-auto">
-            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0" onClick={() => setSelectedSampleData(null)}>
+            <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0" onClick={() => setSelectedSampleData(null)}>
               <SamplePost {...selectedSampleData as Omit<Member, "position" | "percent">} handleClick={setSelectedSampleData} />
             </div>
           </div>
