@@ -38,10 +38,10 @@ const OPPOSITION = [
 
 const DROPDOWN_COLLECTION = [
   { topic: "โควิด", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/covid.png" alt="covid" objectFit='cover' layout='fill' /></div><div>โควิด</div></div> },
-  { topic: "เศรษฐกิจ", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/economic.pn" alt="economi" objectFit='cover' layout='fill' /></div><div>เศรษฐกิจ</div></div> },
+  { topic: "เศรษฐกิจ", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/economic.png" alt="economi" objectFit='cover' layout='fill' /></div><div>เศรษฐกิจ</div></div> },
   { topic: "กัญชา", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/ganja.png" alt="ganja" objectFit='cover' layout='fill' /></div><div>กัญชา</div></div> },
   { topic: "ความเท่าเทียมทางเพศ", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/lgbtq.png" alt="lgbtq" objectFit='cover' layout='fill' /></div><div>ความเท่าเทียมทางเพศ</div></div> },
-  { topic: "การชุมนุม", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/movement.pn" alt="movemen" objectFit='cover' layout='fill' /></div><div>การชุมนุม</div></div> },
+  { topic: "การชุมนุม", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/movement.png" alt="movemen" objectFit='cover' layout='fill' /></div><div>การชุมนุม</div></div> },
   { topic: "สถาบันพระมหากษัตริย์", item: <div className='flex flex-row items-center gap-[5px]'><div className='w-[15px] h-[15px] relative'><Image src="/design_assets/topic_icon/royal.png" alt="royal" objectFit='cover' layout='fill' /></div><div>สถาบันพระมหากษัตริย์</div></div> },
 ]
 
