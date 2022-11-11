@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
-  // basePath: "/politics-on-social",
-  // assetPrefix: "/politics-on-social/",
+  basePath: "/politics-on-social",
+  assetPrefix: "/politics-on-social/",
   images: {
     unoptimized: true,
   },
