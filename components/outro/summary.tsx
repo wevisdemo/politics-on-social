@@ -1,8 +1,7 @@
 
 import React from 'react'
 
-import WvSharer from '@wevisdemo/ui/components/sharer';
-import WvButton from '@wevisdemo/ui/components/button';
+import WvSharer from '@wevisdemo/ui/react/sharer';
 
 type Props = {}
 
@@ -14,7 +13,7 @@ const Summary = (props: Props) => {
           การสื่อสารทางการเมืองผ่านช่องทางออนไลน์ของพรรคการเมือง แสดงให้เห็นได้ว่า<br />แต่ละพรรคต้องการสร้างตัวตนแบบใดให้สังคมออนไลน์ได้เห็น<br />รวมถึงต้องการสื่อสารในเรื่องใดให้ประชาชนในโลกออนไลน์ได้รับรู้และจดจำ<br />ซึ่งเชื่อมโยงกับตัวตนและการสื่อสารในโลกแห่งความเป็นจริงของพรรคการเมืองเช่นกัน
         </div>
         <div className='flex justify-center my-[35px]'>
-          <WvSharer center="true" url="https://wevis.info" light={true} />
+          <WvSharer center url="https://wevis.info" light />
         </div>
       </div>
       <div className='my-[20px]'>

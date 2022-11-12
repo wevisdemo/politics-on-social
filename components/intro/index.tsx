@@ -1,6 +1,6 @@
 import React from 'react'
 import IntroCollection from './intro-collection'
-import WvContainer from '@wevisdemo/ui/components/container';
+import WvContainer from '@wevisdemo/ui/react/container';
 type Props = {}
 
 const Intro = (props: Props) => {
