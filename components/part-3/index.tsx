@@ -8,41 +8,41 @@ type Props = {}
 const CHART_GOVERNMENT = [
   {
     party: "พลังประชารัฐ",
-    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/palangpracharat.png" alt="/topic/palangpracharat.png" objectFit='cover' layout='fill' /></div>,
-    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/palangpracharat.png" alt="/member/palangpracharat.png" objectFit='cover' layout='fill' /></div>,
-    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/palangpracharat.png" alt="/competitor/palangpracharat.png" objectFit='cover' layout='fill' /></div>,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/palangpracharat.png" alt="/topic/palangpracharat.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/palangpracharat.png" alt="/member/palangpracharat.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/palangpracharat.png" alt="/competitor/palangpracharat.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
   },
   {
     party: "ภูมิใจไทย",
-    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/phumjaithai.png" alt="/topic/phumjaithai.png" objectFit='cover' layout='fill' /></div>,
-    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/phumjaithai.png" alt="/member/phumjaithai.png" objectFit='cover' layout='fill' /></div>,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/phumjaithai.png" alt="/topic/phumjaithai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/phumjaithai.png" alt="/member/phumjaithai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
     competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/phumjaithai.png" alt="/competitor/phumjaithai.png" objectPosition='top' objectFit='contain' layout='fill' /></div>,
   },
   {
     party: "ประชาธิปัตย์",
-    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/prachatipat.png" alt="/topic/prachatipat.png" objectFit='cover' layout='fill' /></div>,
-    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/prachatipat.png" alt="/member/prachatipat.png" objectFit='cover' layout='fill' /></div>,
-    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/prachatipat.png" alt="/competitor/prachatipat.png" objectFit='cover' layout='fill' /></div>,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/prachatipat.png" alt="/topic/prachatipat.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/prachatipat.png" alt="/member/prachatipat.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/prachatipat.png" alt="/competitor/prachatipat.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
   },
 ]
 const CHART_OPPOSITION = [
   {
     party: "เพื่อไทย",
-    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/puerthai.png" alt="/topic/puerthai.png" objectFit='cover' layout='fill' /></div>,
-    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/puerthai.png" alt="/member/puerthai.png" objectFit='cover' layout='fill' /></div>,
-    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/puerthai.png" alt="/competitor/puerthai.png" objectFit='cover' layout='fill' /></div>,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/puerthai.png" alt="/topic/puerthai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/puerthai.png" alt="/member/puerthai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/puerthai.png" alt="/competitor/puerthai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
   },
   {
     party: "อนาคตใหม่/ก้าวไกล",
-    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/kawklai.png" alt="/topic/kawklai.png" objectFit='cover' layout='fill' /></div>,
-    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/kawklai.png" alt="/member/kawklai.png" objectFit='cover' layout='fill' /></div>,
-    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/kawklai.png" alt="/competitor/kawklai.png" objectFit='cover' layout='fill' /></div>,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/kawklai.png" alt="/topic/kawklai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/kawklai.png" alt="/member/kawklai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/kawklai.png" alt="/competitor/kawklai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
   },
   {
     party: "เสรีรวมไทย",
-    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/seriruamthai.png" alt="/topic/seriruamthai.png" objectFit='cover' layout='fill' /></div>,
-    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/seriruamthai.png" alt="/member/seriruamthai.png" objectFit='cover' layout='fill' /></div>,
-    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/seriruamthai.png" alt="/competitor/seriruamthai.png" objectFit='cover' layout='fill' /></div>,
+    topic: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/topic/seriruamthai.png" alt="/topic/seriruamthai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    member: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/member/seriruamthai.png" alt="/member/seriruamthai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
+    competitor: <div className='w-[150px] h-[221.31px] relative' ><Image src="/design_assets/chart/chart06_feedback/competitor/seriruamthai.png" alt="/competitor/seriruamthai.png" objectFit='contain' objectPosition='top' layout='fill' /></div>,
   },
 ]
 

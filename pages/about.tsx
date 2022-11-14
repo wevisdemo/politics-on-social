@@ -129,7 +129,8 @@ const About = (props: Props) => {
             </svg>
             <span>ดาวน์โหลดข้อมูล</span>
           </WvButton>
-          <WvButton>
+          <WvButton
+            onClick={() => window.open("https://airtable.com/shryu4errnlj1LWsM", "_blank")}>
             <Image
               unoptimized
               width="30"
