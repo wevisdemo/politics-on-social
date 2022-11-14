@@ -1,5 +1,5 @@
 import React from 'react'
-import WvContainer from "@wevisdemo/ui/components/container"
+import WvContainer from "@wevisdemo/ui/react/container"
 import PostSummary from './post-summary'
 import ChartPattern from './chart/chart-pattern'
 type Props = {}

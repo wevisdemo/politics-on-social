@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import WvButton from '@wevisdemo/ui/components/button';
-import WvButtonGroup from '@wevisdemo/ui/components/button-group';
-import WvContainer from '@wevisdemo/ui/components/container';
-import WvParagraphGroup from '@wevisdemo/ui/components/paragraph-group';
-import WvSharer from '@wevisdemo/ui/components/sharer';
+import WvButton from '@wevisdemo/ui/react/button';
+import WvButtonGroup from '@wevisdemo/ui/react/button-group';
+import WvContainer from '@wevisdemo/ui/react/container';
+import WvParagraphGroup from '@wevisdemo/ui/react/paragraph-group';
+import WvSharer from '@wevisdemo/ui/react/sharer';
 
-import WvNavbar from '@wevisdemo/ui/components/navbar';
-import WvNavButton from '@wevisdemo/ui/components/nav-button'
-import WvFooter from '@wevisdemo/ui/components/footer';
+import WvNavbar from '@wevisdemo/ui/react/navbar';
+import WvNavButton from '@wevisdemo/ui/react/nav-button'
+import WvFooter from '@wevisdemo/ui/react/footer';
 import { useRouter } from 'next/router';
 import Image from 'next/image'
 type Props = {}
@@ -54,27 +54,27 @@ const About = (props: Props) => {
           <p>หากมีข้อสงสัยต้องการสอบถามเพิ่มเติม ประสงค์แจ้งเปลี่ยนแปลงหรือเพิ่มเติมข้อมูลเพื่อความถูกต้อง หรือมีข้อเสนอแนะใดๆ สามารถติดต่อได้ที่ team@punchup.world</p>
         </WvParagraphGroup>
         <WvParagraphGroup heading="อาสาสมัครร่วมพัฒนา">
-          <WvParagraphGroup small="true" heading="เขียนโปรแกรม">
+          <WvParagraphGroup small heading="เขียนโปรแกรม">
             <p>
               Worawit Roengruen
             </p>
           </WvParagraphGroup>
-          <WvParagraphGroup small="true" heading="ออกแบบ">
+          <WvParagraphGroup small heading="ออกแบบ">
             <p>
               น้ำใส ศุภวงศ์
             </p>
           </WvParagraphGroup>
-          <WvParagraphGroup small="true" heading="สืบค้นและรวบรวมข้อมูล">
+          <WvParagraphGroup small heading="สืบค้นและรวบรวมข้อมูล">
             <p>
               สิทธิกานต์ ธีระวัฒนชัย, <a className='text-side-gov' href='https://wisesight.com' target="_blank" rel="noreferrer">Wisesight</a>
             </p>
           </WvParagraphGroup>
-          <WvParagraphGroup small="true" heading="บรรณาธิการ">
+          <WvParagraphGroup small heading="บรรณาธิการ">
             <p>
               ธนิสรา เรืองเดช
             </p>
           </WvParagraphGroup>
-          <WvParagraphGroup small="true" heading="ประสานงานและจัดการอื่นๆ">
+          <WvParagraphGroup small heading="ประสานงานและจัดการอื่นๆ">
             <p>
               Punch Up
             </p>
@@ -83,8 +83,8 @@ const About = (props: Props) => {
             <p>โปรเจกต์ “ส่องเพจพรรค การเมืองถูกสื่อสารทางออนไลน์อย่างไร ?” ได้รับการสนับสนุนทุนในการดำเนินงานจาก <a className='text-side-gov' href='https://www.ned.org' target="_blank" rel="noreferrer">National Endowment for Democracy (NED)</a> ซึ่งนำมาใช้เป็นต้นทุนในการรวมรวมข้อมูล ออกแบบ พัฒนาเว็บไซต์ ประสานงาน บริหารจัดการ ตลอดจนการจัด Meetup เพื่อดำเนินโครงการ</p>
           </WvParagraphGroup>
         </WvParagraphGroup>
-        <WvButtonGroup center="true" >
-          <WvButton color="blue" center="true"
+        <WvButtonGroup center>
+          <WvButton color="blue"
             onClick={() => window.open("https://drive.google.com/drive/folders/1Ytxy7exTpVKEvIsX0MJSBbfgTsKi-spW", "_blank")}
           >
             <svg
@@ -140,7 +140,7 @@ const About = (props: Props) => {
             <span>Feedback</span>
           </WvButton>
         </WvButtonGroup>
-        <WvSharer center="true" url="PROJECT_MAIN_PAGE" />
+        <WvSharer center url="PROJECT_MAIN_PAGE" />
       </WvContainer >
       <WvFooter dark={true} />
     </div >

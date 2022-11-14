@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { scrollInToView } from './utils'
-import WVContainer from '@wevisdemo/ui/components/container'
+
 type Props = {}
 
 const NAV_COLLECTION = [

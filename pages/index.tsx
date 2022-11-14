@@ -4,9 +4,9 @@ import Head from 'next/head';
 
 import dynamic from 'next/dynamic';
 
-import WvNavbar from '@wevisdemo/ui/components/navbar';
-import WvNavButton from '@wevisdemo/ui/components/nav-button'
-import WvFooter from '@wevisdemo/ui/components/footer';
+import WvNavbar from '@wevisdemo/ui/react/navbar';
+import WvNavButton from '@wevisdemo/ui/react/nav-button'
+import WvFooter from '@wevisdemo/ui/react/footer';
 import { useRouter } from 'next/router';
 import { Suspense } from 'react';
 import Spinner from '../components/utils/spinner';
