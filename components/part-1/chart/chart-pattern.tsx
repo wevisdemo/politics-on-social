@@ -42,7 +42,7 @@ const PatternItem = ({ data }: { data: typeof CHART_PATTERN_COLLECTION[number] }
         {data.keyEvent.map((event, index) => (
           <div key={`event-${data.party}-${index}`}
             className='text-left mb-2'>
-            <span className='wv-font-regular'>{index + 1}.</span><span className=' wv-font-bold'> {event.event}</span> <span className='text-gray-2'>({event.date})</span> : {event.description}&nbsp;<a href={event.link} target="_blank" rel="noreferrer" className='text-green  hover:underline'>(คลิกดูตัวอย่างโพส)</a>
+            <span className='wv-font-regular'>{index + 1}.</span><span className=' wv-font-bold'> {event.event}</span> <span className='text-gray-2'>({event.date})</span> : {event.description}&nbsp;<a href={event.link} target="_blank" rel="noreferrer" className='text-green  hover:underline'>(คลิกดูตัวอย่างโพสต์)</a>
           </div>
         ))}
       </div>

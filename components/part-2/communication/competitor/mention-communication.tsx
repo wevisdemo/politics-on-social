@@ -44,7 +44,7 @@ const MentionCommunication = (props: Props) => {
               </div>
             </div>
           }>
-            <span className='underline text-green'>ชื่อพรรค หรือชื่อ-นามสกุลสมาชิกตำแหน่งสำคัญของพรรคอื่นๆ</span>
+            <span className='underline text-green'>ชื่อพรรค หรือชื่อ-นามสกุลสมาชิกตำแหน่งสำคัญของพรรคอื่น</span>
           </ToolTip>
           <span className='wv-font-bold'>ต่อจำนวนโพสต์ทั้งหมดของแต่ละพรรค</span>
         </div>

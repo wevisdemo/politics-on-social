@@ -8,7 +8,7 @@ const Methodology = (props: Props) => {
       <div className='text-center border-t-[1px] border-white opacity-60
       tablet:max-w-[750px] mx-auto'>
         <div className='wv-font-anuphan wv-b4 wv-font-bold !my-[27px]'>Methodology</div>
-        <div className='wv-font-anuphan wv-b5 !mb-[27px]'>ข้อมูลชุดนี้ได้ทำการเก็บข้อมูลจากฐานข้อมูลของ Wisesight<br /> โดยเป็นข้อมูลที่เป็นโพสต์จากบัญชีอย่างเป็นทางการของพรรคการเมืองทั้งหมด 6 พรรค<br /> (โดยรวมอนาคตใหม่และก้าวไกลเข้าด้วยกัน) คือ ประชาธิปตย์, พลังประชารัฐ, เพื่อไทย, ภูมิใจไทย, เสรีรวมไทย,<br /> และอนาคตใหม่รวมกับก้าวไกล จากช่องทาง Facebook, Twitter, YouTube ตั้งแต่วันที่ 1 พฤษภาคม 2562 - 31 สิงหาคม 2565</div>
+        <div className='wv-font-anuphan wv-b5 !mb-[27px]'>ข้อมูลชุดนี้ได้ทำการเก็บข้อมูลจากฐานข้อมูลของ Wisesight<br /> โดยเป็นข้อมูลที่เป็นโพสต์จากบัญชีอย่างเป็นทางการของพรรคการเมืองทั้งหมด 6 พรรค<br /> (โดยรวมอนาคตใหม่และก้าวไกลเข้าด้วยกัน) คือ ประชาธิปัตย์, พลังประชารัฐ, เพื่อไทย, ภูมิใจไทย, เสรีรวมไทย,<br /> และอนาคตใหม่รวมกับก้าวไกล จากช่องทาง Facebook, Twitter, YouTube ตั้งแต่วันที่ 1 พฤษภาคม 2562 - 31 สิงหาคม 2565</div>
         <div className='wv-font-anuphan wv-b5 !mb-[30px]'>This information is gathered from Wisesight`s database, which includes posts made from the official Facebook, Twitter, and YouTube accounts of all six Thai political parties (Democrat, Palang Pracharath, Pheu Thai, Bhumjaithai, Thai Liberal, Kao Klai and Future Forward) between May 1, 2019, and August 31, 2022</div>
       </div>
       <div className='flex flex-col tablet:flex-row justify-center items-center gap-x-[27px]
