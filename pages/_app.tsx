@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Component {...pageProps} />
       <WvCookieConsent
-        policyUrl='https://punchup.world'
+        policyUrl='https://wevis.info/cookies_1-3/'
         cookieOptions={['Analytics']}
         onAccept={onCookieAccept}
       />
