@@ -21,7 +21,7 @@ const Intro = (props: Props) => {
           <div className='wv-font-anuphan
           wv-b6 opacity-50 leading-[21px]
           wv-b6 tablet:leading-[21px]'>
-            เก็บข้อมูลระหว่างวันที่ 1 พ.ค. 62 -31 ส.ค. 65
+            เก็บข้อมูลระหว่างวันที่ 1 พ.ค. 62 - 31 ส.ค. 65
           </div>
         </div>
       </WvContainer>
