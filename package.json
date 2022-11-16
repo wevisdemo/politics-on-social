@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.2",
-    "@wevisdemo/ui": "^5.1.0",
+    "@wevisdemo/ui": "^5.2.0",
     "d3-scale": "^4.0.2",
     "moment": "^2.29.4",
     "next": "12.3.1",
