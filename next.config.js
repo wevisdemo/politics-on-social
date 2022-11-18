@@ -5,9 +5,6 @@ const nextConfig = {
   trailingSlash: true,
   basePath: "/politics-on-social",
   assetPrefix: "/politics-on-social/",
-  images: {
-    unoptimized: true,
-  },
   env: {
     BASE_PATH: "/politics-on-social",
     HOST: "https://wevisdemo.github.io",

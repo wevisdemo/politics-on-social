@@ -14,7 +14,7 @@ const Info = ({ members, handleClick }: {
   const [selectIndex, setSelectIndex] = useState(-1)
 
   return (
-    <div className='absolute top-0 left-0 right-0 bottom-0'
+    <div className='w-full h-full absolute top-0 left-0 right-0 bottom-0'
       onClick={() => { setSelectIndex(-1) }}
       onMouseOver={() => setSelectIndex(-1)}>
       <div className='relative' >

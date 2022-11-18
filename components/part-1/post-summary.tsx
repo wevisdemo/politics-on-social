@@ -1,5 +1,7 @@
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import ChartAll from './chart/chart-all';
+import Spinner from '../utils/spinner';
+const ChartAll = dynamic(() => import('./chart/chart-all'), { loading: () => <Spinner /> });
 type Props = {}
 
 

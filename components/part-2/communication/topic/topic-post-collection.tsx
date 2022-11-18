@@ -1,18 +1,17 @@
 import moment from 'moment'
 import 'moment/locale/th'
-import React, { useEffect, useState, useRef } from 'react'
-import ScrollableArrow from '../../../utils/scrollable-arrow'
-import { TOPIC_COMMUNICATION_POST } from './topic-data'
-import Image from 'next/image'
+import React, { useEffect, useRef, useState } from 'react'
 import { getLogo, getPostChanelLogo } from '../../../utils'
+import ScrollableArrow from '../../../utils/scrollable-arrow'
+import { TOPIC_COMMUNICATION_POST_TYPE, getPostByTopic } from './topic-data'
 type Props = {}
 
 const TopicPostCollection = ({ topic }: {
   topic: string
 }) => {
-  const [postItem, setPostItem] = useState<typeof TOPIC_COMMUNICATION_POST>([])
+  const [postItem, setPostItem] = useState<TOPIC_COMMUNICATION_POST_TYPE>([])
   useEffect(() => {
-    setPostItem(TOPIC_COMMUNICATION_POST.filter((data) => data.topic === topic))
+    setPostItem(getPostByTopic(topic))
   }, [topic])
 
 

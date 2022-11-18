@@ -48,6 +48,7 @@ const DROPDOWN_COLLECTION = [
 
 const TopicCommunication = (props: Props) => {
   const [selectedItem, setSelectedItem] = useState(0)
+  const [selectTopic, setSelectTopic] = useState("โควิด")
   const [openDropdown, setOpenDropdown] = useState(false)
   return (
     <div className='py-[40px]'>
@@ -201,7 +202,11 @@ const TopicCommunication = (props: Props) => {
             {DROPDOWN_COLLECTION.map((data, index) => (
               <button key={`dropdown-item-${index}`}
                 className='p-[10px]'
-                onClick={() => { setSelectedItem(index); setOpenDropdown(false) }}>
+                onClick={() => {
+                  setSelectedItem(index);
+                  setSelectTopic(data.topic);
+                  setOpenDropdown(false)
+                }}>
                 {data.item}
               </button>
             ))}
@@ -211,7 +216,7 @@ const TopicCommunication = (props: Props) => {
           wv-b5 tablet:leading-[27px]'>ที่ได้รับความสนใจสูงของแต่ละพรรค</div>
       </div>
       <div className='ml-[10px]'>
-        <TopicPostCollection topic={DROPDOWN_COLLECTION[selectedItem].topic} />
+        <TopicPostCollection topic={selectTopic} />
       </div>
     </div>
   )

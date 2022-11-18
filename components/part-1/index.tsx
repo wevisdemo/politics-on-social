@@ -1,7 +1,9 @@
 import React from 'react'
-import WvContainer from "@wevisdemo/ui/react/container"
-import PostSummary from './post-summary'
-import ChartPattern from './chart/chart-pattern'
+import dynamic from 'next/dynamic'
+import Spinner from '../utils/spinner'
+const PostSummary = dynamic(() => import('./post-summary'), { loading: () => <Spinner /> })
+const ChartPattern = dynamic(() => import('./chart/chart-pattern'), { loading: () => <Spinner /> })
+
 type Props = {}
 
 const Part1 = (props: Props) => {

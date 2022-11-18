@@ -1,3 +1,9 @@
+export const getPostByTopic = (topic: string) => {
+  return TOPIC_COMMUNICATION_POST.filter((data) => data.topic === topic)
+}
+
+export type TOPIC_COMMUNICATION_POST_TYPE = typeof TOPIC_COMMUNICATION_POST
+
 export const TOPIC_COMMUNICATION_POST = [
   {
     "topic": "โควิด",
@@ -411,5 +417,4 @@ export const TOPIC_COMMUNICATION_POST = [
     "postshare": 318,
     "posturl": "https://www.facebook.com/161052211196800/posts/929202551048425/"
   }
-
 ]
