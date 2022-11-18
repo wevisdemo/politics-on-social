@@ -1,6 +1,8 @@
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import React, { useState } from 'react'
-import CoverCollection from './cover-collection';
+import Spinner from '../../../utils/spinner';
+const CoverCollection = dynamic(() => import('./cover-collection'), { ssr: false, loading: () => <Spinner /> });
 
 type Props = {}
 

@@ -1,8 +1,9 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import '@wevisdemo/ui/styles/index.css';
-import WvCookieConsent from '@wevisdemo/ui/react/cookie-consent';
+const WvCookieConsent = dynamic(() => import('@wevisdemo/ui/react/cookie-consent'), { ssr: false });
 import { initClarity } from '../utils/clarity';
+import dynamic from 'next/dynamic';
 
 function onCookieAccept(options: Record<string, boolean>) {
   if (options['Analytics']) {

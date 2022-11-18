@@ -1,4 +1,8 @@
 import Image from 'next/image'
+
+export type Members = typeof GOVERNMENT[number]['members']
+export type Member = typeof GOVERNMENT[number]['members'][number]
+
 export const GOVERNMENT = [
   {
     party: "พลังประชารัฐ",
