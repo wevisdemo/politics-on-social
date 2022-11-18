@@ -1,15 +1,14 @@
-import Head from 'next/head';
 import WvButton from '@wevisdemo/ui/react/button';
 import WvButtonGroup from '@wevisdemo/ui/react/button-group';
 import WvContainer from '@wevisdemo/ui/react/container';
 import WvParagraphGroup from '@wevisdemo/ui/react/paragraph-group';
 import WvSharer from '@wevisdemo/ui/react/sharer';
+import Head from 'next/head';
 
-import WvNavbar from '@wevisdemo/ui/react/navbar';
-import WvNavButton from '@wevisdemo/ui/react/nav-button'
 import WvFooter from '@wevisdemo/ui/react/footer';
+import WvNavButton from '@wevisdemo/ui/react/nav-button';
+import WvNavbar from '@wevisdemo/ui/react/navbar';
 import { useRouter } from 'next/router';
-import Image from 'next/image'
 type Props = {}
 
 const About = (props: Props) => {
@@ -25,7 +24,7 @@ const About = (props: Props) => {
         <meta property="og:description" content="ร่วมรู้จักตัวตนของพรรคการเมืองผ่านช่องทางในโลกออนไลน์จากประเด็นน่าสนใจ" />
         <meta property="og:image" content={`${process.env.SECURE_HOST}/design_assets/sns/og.jpg`} />
         {/* twitter */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={`${process.env.SECURE_HOST}${process.env.BASE_PATH}`} />
         <meta name="twitter:title" content="ส่องเพจพรรค" />
         <meta name="twitter:description" content="ร่วมรู้จักตัวตนของพรรคการเมืองผ่านช่องทางในโลกออนไลน์จากประเด็นน่าสนใจ" />
